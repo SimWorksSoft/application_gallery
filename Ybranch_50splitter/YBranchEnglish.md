@@ -16,8 +16,8 @@ Y branch waveguide is a kind of important single component in integrated photoni
 
 The Y-branch splitter is placed inside the glass. The `Mesh Order` in the FDTD solver determines which material to use in the overlapped region, with larger values having higher priority. So in this example, the `Mesh Order` of Si is set to 1 and the `Mesh Order` of $SiO_{2}$ is set to 0.
 
-In this example, the Y-branch splitter is symmetric up and down. The `force symmetric y mesh` function can be used to ensure that the mesh distribution of the top parts is same as that of bottom parts in the structure. The index_x distribution in the following figure demonstrates that the discretized structure constructed in the simulation is also symmetrical up and down, which satisfies our requirements.
-![YBranch_index](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/YBranch_index_x.png)
+In this example, the Y-branch splitter is symmetric up and down. The `force symmetric y mesh` function can be used to ensure that the mesh distribution of the top parts is same as that of bottom parts in the structure. View the index distribution of the device at any wavelength to verify that the mesh distribution meets the simulation requirements. The index_x distribution in the following figure demonstrates that the discretized structure constructed in the simulation is also symmetrical up and down, which satisfies our requirements.
+![YBranch_index](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/YBranch_index_x_new.png)
 
 # Simulation results
 

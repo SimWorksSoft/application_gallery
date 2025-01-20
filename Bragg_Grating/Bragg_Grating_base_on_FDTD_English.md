@@ -66,7 +66,7 @@ where $\kappa$ is the grating coupling coefficient, $\Delta\lambda$ is the bandw
 
 When scanning with $\Delta w$ ranging from $0.01\mu m$ to $0.05\mu m$, it is possible to observe the effect of grating depth on grating performance (the coupling coefficient $\kappa$). By opening the appendix project and running the parameter sweep, you can obtain the trend of grating performance with corrugation depth. The scatter plot of $\kappa$ is depicted below, which is similar to the one in reference [^1] Figure 7.
 
-![bragg_grating_kappa_sweepdw](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/bragg_grating_kappa_sweepdw_scatter.png)
+![bragg_grating_kappa_sweepdw](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/bragg_grating_kappa_sweepdw_scatter_new.png)
 
 # References
 

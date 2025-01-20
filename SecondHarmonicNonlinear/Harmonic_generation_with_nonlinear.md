@@ -32,4 +32,5 @@ $$\chi^{(2)}E<<\chi^{(1)}$$
 
 打开附件，直接运行，在时间监视器当中可以得到经过傅里叶变化的频谱（见下图）。结果表明接收的光谱不仅仅在光源 200THz 附近存在共振峰，在后续 400、600、800THz 处也产生了共振峰，表明光与非线性材料相互作用时，产生了二次谐波。
 
-![E_spectrum](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nonlinear_chi2_E_spectrum_log10.png)![H_spectrum](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nonlinear_chi2_H_spectrum_log10.png)
+![E_spectrum](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nonlinear_chi2_E_spectrum_log10_new.png)
+![H_spectrum](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nonlinear_chi2_H_spectrum_log10_new.png)

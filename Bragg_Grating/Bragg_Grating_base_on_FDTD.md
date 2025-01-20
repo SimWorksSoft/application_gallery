@@ -62,7 +62,7 @@ $$\kappa=\pi n_g\Delta\lambda/\lambda_0^2$$
 
 设置$\Delta w$从$0.01\mu m$增长到$0.05\mu m$进行扫描，可以观察到光栅刻痕的深度对光栅性能（耦合系数$\kappa$）的影响。打开本案例附录工程，运行参数扫描后，将扫描结果当中的$\kappa$绘制成散点图，即可得到光栅性能随光栅刻痕深度的变化趋势，如下图所示，与参考文献[^1]Figure7 十分接近。
 
-![bragg_grating_kappa_sweepdw](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/bragg_grating_kappa_sweepdw_scatter.png)
+![bragg_grating_kappa_sweepdw](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/bragg_grating_kappa_sweepdw_scatter_new.png)
 
 # 参考文献
 

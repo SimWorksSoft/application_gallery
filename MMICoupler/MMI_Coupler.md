@@ -38,7 +38,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/MMI_FDT
 
 理论上，多模干涉耦合器对于 TE，TM 模式没有选择性，本案例当中，将使用 TE0 进行仿真。其模式场图如下所示
 
-![mode_source_TE0](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_FDTD_port_mode_source_TE0.png)
+![mode_source_TE0](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_FDTD_port_mode_source_TE0_new.png)
 
 # 仿真结果
 
@@ -53,18 +53,18 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/MMI_FDT
 
 ## 多模干涉区的长度优化
 
-以理论公式计算得到的多模干涉区长度作为参考（$L_{MMI}=33\mu m$），本案例将会通过参数的优化与扫描功能来寻找最佳的多模干涉区长度。首先设置多模干涉区长度的扫描区间为$29\mu m$~$34\mu m$，打开附件当中的工程，运行`mmi_length`的参数扫描，即可得到 port2 中的透射率随其变化的趋势，如下图所示，可以观察到最佳透射率应该在$31\mu m$到$32\mu m$之间。
+以理论公式计算得到的多模干涉区长度作为参考（$L_{MMI}=33\mu m$），本案例将会通过参数的优化与扫描功能来寻找最佳的多模干涉区长度。首先设置多模干涉区长度的扫描区间为$29\mu m$~$34\mu m$，打开附件当中的工程，运行`mmi_length`的参数扫描，即可得到 port2 中的透射率随其变化的趋势，如下图所示，可以观察到最佳透射率应该在$31\mu m$到$33\mu m$之间。
 
-![mmi_length](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_lite_sweep_mmi_length_port2_T.png)
+![mmi_length](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_lite_sweep_mmi_length_port2_T_beta337.png)
 
 针对上述参数扫描结果，可以继续使用`optimization`对该参数进一步优化。优化所使用的默认算法为粒子群（Particle Swarm）算法 (见参考文献[^3]) ，请注意选择进行目标函数的最大化还是最小化，即：Type 中选择`Maximize`还是`Minimize`，其它参数的意义具体参考[Optimizations and Sweeps](/localhost/knowledge-base/User-Manual_optimization-and-sweep)。
-设置多模干涉区长度优化区间为$31\mu m$~$32\mu m$，打开附件当中的工程，运行`mmi_length_optimization`优化，`best fom`表示优化得到的最大透射率，为 0.475，`best parameters`表示优化得到最佳多模干涉区长度，为$31.3\mu m$。其它参数意义具体参考[Optimizations and Sweeps](/localhost/knowledge-base/User-Manual_optimization-and-sweep)。
+设置多模干涉区长度优化区间为$31\mu m$~$33\mu m$，打开附件当中的工程，运行`mmi_length_optimization`优化，`best fom`表示优化得到的最大透射率，为 0.464，`best parameters`表示优化得到最佳多模干涉区长度，为$32.5\mu m$。其它参数意义具体参考[Optimizations and Sweeps](/localhost/knowledge-base/User-Manual_optimization-and-sweep)。
 
 ## 楔形结构的参数优化
 
 对于楔形结构的宽度，一方面增加其宽度，可以提高自成像的质量，从而降低器件损耗；另一方面，由于器件十分紧凑，两个输出波导之间间隔很小，为了防止输出波导之间的耦合串扰，楔形结构的宽度应该尽量小。本案例对其进行参数扫描，以便选择出最优解，扫描范围为$0.5\mu m$~$1.5\mu m$。打开附件工程，运行`taper_width`参数扫描，其结果如下图所示。在考虑两个输出波导之间的间距后，用户可以根据所需要的透射率要求，自行选择合适的楔形结构的宽度。
 
-![sweep_taper_width](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/lite_client_sweep_taper_width.png)
+![sweep_taper_width](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/lite_client_sweep_taper_width.png_release141.png)
 
 # 参考文献
 

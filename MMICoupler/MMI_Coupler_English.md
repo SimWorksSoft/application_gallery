@@ -42,7 +42,7 @@ This example builds a MMI coupler with 1x2 ports in a 3D FDTD simulation. To mak
 
 In this example, this MMI coupler is not sensitive to the polarization, e.g., TE and TM modes. Here, the TE0 mode is selected as the port source and shown in below figure.
 
-![mode_source_TE0](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_FDTD_port_mode_source_TE0.png)
+![mode_source_TE0](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_FDTD_port_mode_source_TE0_new.png)
 
 # Simulation results
 
@@ -57,19 +57,19 @@ Following a successful simulation of a single project, Optimizations and Sweeps 
 
 ## Optimization of MMI length
 
-Using the theoretical value ($L_{MMI}$=33$\mu$m) as a reference, this example will utilize the Optimizations and Sweeps function to determine the best MMI length. The scanning range for the MMI length in this case is set to $29\mu m$~$34\mu m$. After running the `mmi_length` sweep in the appendix project, we observe that the transmittivity in port2 varies with the length of MMI. As shown in the figure, the optimal MMI length should be found between $31\mu m$ and $32\mu m$.
+Using the theoretical value ($L_{MMI}$=33$\mu$m) as a reference, this example will utilize the Optimizations and Sweeps function to determine the best MMI length. The scanning range for the MMI length in this case is set to $29\mu m$~$34\mu m$. After running the `mmi_length` sweep in the appendix project, we observe that the transmittivity in port2 varies with the length of MMI. As shown in the figure, the optimal MMI length should be found between $31\mu m$ and $33\mu m$.
 
-![mmi_length](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_lite_sweep_mmi_length_port2_T.png)
+![mmi_length](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_lite_sweep_mmi_length_port2_T_beta337.png)
 
 Based on the above sweep results, the MMI length can be further optimized by using the `optimization` function. The default algorithm used for Optimization is the Particle Swarm algorithm (see reference [^3]). Please note whether you choose to maximize or minimize the objective function, that is, select `Maximize` or `Minimize` in `Type`. The meaning of other parameters is referred to [Optimizations and Sweeps](/localhost/knowledge-base/User-Manual_optimization-and-sweep).
 
-Set the optimization range for the MMI length from $31\mu m$ to $32\mu m$. Then, run the `mmi_length_optimization` in the project to obtain the results. Among the results, `best fom` represents the maximum transmittivity obtained, which is 0.475, `best parameters` represent the optimal MMI length obtained, which is $31.3\mu m$, and the meaning of other parameters is referred to [Optimizations and Sweeps](/localhost/knowledge-base/User-Manual_optimization-and-sweep).
+Set the optimization range for the MMI length from $31\mu m$ to $33\mu m$. Then, run the `mmi_length_optimization` in the project to obtain the results. Among the results, `best fom` represents the maximum transmittivity obtained, which is 0.464, `best parameters` represent the optimal MMI length obtained, which is $32.5\mu m$, and the meaning of other parameters is referred to [Optimizations and Sweeps](/localhost/knowledge-base/User-Manual_optimization-and-sweep).
 
 ## Optimization of Taper Width
 
 For the width of the wedge structure, on the one hand, increasing its width can improve the quality of self-imaging and thus reduce the device loss; on the other hand, since the device is very compact and the spacing between the two output waveguides is very small, the width of the taper structure should be as small as possible to prevent the coupling crosstalk between the output waveguides. In this example, a parameter sweep was conducted on the taper width between $0.5\mu m$ and $1.5\mu m$ to select the optimal solution. Running the `taper_width` parameter sweep in the appendix yields the results shown in the below figure. After considering the spacing between the two output waveguides, the user can choose the appropriate width of the taper structure according to the desired transmittivity requirements.
 
-![sweep_taper_width](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/lite_client_sweep_taper_width.png)
+![sweep_taper_width](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/lite_client_sweep_taper_width.png_release141.png)
 
 # References
 

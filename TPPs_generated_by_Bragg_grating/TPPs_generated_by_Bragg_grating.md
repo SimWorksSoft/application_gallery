@@ -15,7 +15,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/TPP_on_
 
 本案例使用 2D FDTD 仿真，构建如下图所示结构，在 x 方向上使用`periodic`边界条件，以节省计算时间。金属$Ag$层与布拉格光栅的相关参数参考文献[^1]，设置如下表所示
 
-![structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/TPP_on_FDTD_structure.png)
+![structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/TPP_on_FDTD_structure_new.png)
 
 |        参数名称         | 符号  |   尺寸   |
 | :---------------------: | :---: | :------: |

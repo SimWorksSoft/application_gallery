@@ -20,7 +20,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/surface
 
 ## 材料
 
-在 1.31$\mu m$的波段下，该结构中基底材料$SiO_2$的相对折射率为 1.4468，PC 结构由相对折射率为 2.7204 的$TiO_2$和相对折射率为 1.4468 的$SiO_2$交替组成，最上层的材料是相对折射率为 1.481 的 PMMA，背景材料为相对折射率为 1 的空气。石墨烯材料的散射率设置为 0.11meV、化学能为设置为 0.05eV，其拟合曲线如下所示，其余参数及细节请参考[石墨烯材料](/localhost/knowledge-base/User-Manual_graphene-material)。
+在 1.31$\mu m$的波段下，该结构中基底材料$SiO_2$的相对折射率为 1.4468，PC 结构由相对折射率为 2.7204 的$TiO_2$和相对折射率为 1.4468 的$SiO_2$交替组成，最上层的材料是相对折射率为 1.481 的 PMMA，背景材料为空气。石墨烯材料的散射率设置为 0.11meV、化学势设置为 0.05eV，其拟合曲线如下所示，其余参数及细节请参考[石墨烯材料](/localhost/knowledge-base/User-Manual_graphene-material)。
 
 ![graphene_fit](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/surface_plasmon_in_graphene_material_fit.png)
 

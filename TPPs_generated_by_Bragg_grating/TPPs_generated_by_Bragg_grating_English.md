@@ -15,7 +15,7 @@ In 2007, Kaliteevski et al. successfully excited Tamm plasmon polaritons (TPPs) 
 
 As shown in the below figure, the bragg grating with defect layer is simulated in 2D FDTD. And the `periodic` boundary condition is used in the x direction to save the simulation time. The structure parameters of metal $Ag$ layer and Bragg grating referring to the paper[^1] are shown in the table below.
 
-![structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/TPP_on_FDTD_structure.png)
+![structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/TPP_on_FDTD_structure_new.png)
 
 |          name           | symbol |   size   |
 | :---------------------: | :----: | :------: |

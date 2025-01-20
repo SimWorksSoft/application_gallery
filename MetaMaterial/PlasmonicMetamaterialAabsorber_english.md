@@ -34,7 +34,7 @@ Among them, $\varepsilon=1$, plasma frequency $\omega_p=1.37 \times 10^{16}rad/s
 
 ## Reflectivity, transmissivity and absorptivity
 
-Based on the T data obtained from the `Frequency-Domain Field and Power(FDFP)` monitors at the top and bottom of the MIM infrared absorber, the reflectivity (R), transmissivity (T), and absorptivity (A) of the absorber are plotted, as shown in the figure below. It can be found that the peak absorptivity of the absorber at $0.59616\mu m$ is $0.99733$. The result is highly consistent with that shown in **Figure 2** in the reference.
+Based on the T data obtained from the `Frequency-Domain Field and Power(FDFP)` monitors at the top and bottom of the MIM infrared absorber, the reflectivity (R), transmissivity (T), and absorptivity (A) of the absorber are plotted, as shown in the figure below. At a wavelength of around $0.595\mu m$, the MIM infrared absorber's absorbance reaches a peak (over $99\%$), and this result is highly consistent with **Figure 2** in the referenced literature.
 
 ![InfraredAbsorber_ART](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/InfraredAbsorber_ART.png)
 

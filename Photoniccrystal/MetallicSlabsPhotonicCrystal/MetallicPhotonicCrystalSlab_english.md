@@ -19,7 +19,7 @@ The photonic crystal used in this case is made of a dielectric material with a p
 
 ## Material
 
-In this case, the permittivity of tungsten metal will affect the performance of the device. Therefore, before simulating, you need to check the fitting error of the model and data points (Sampled data) fitted in the simulation band. When the fitting error is lower than the default value (RMSE=0.1), the fitting model meets the simulation requirements; otherwise, adjust the fitting error and the max coefficient of a polynomial and refit a model. The figure below shows the results of automatic fitting in this case that meet the error requirements.
+In this case, the permittivity of tungsten metal will affect the performance of the device. Therefore, before simulating, it is necessary to check whether the fitted model within the simulation band meets the simulation requirements. If it does not, adjust the fitting error and the max coefficient of a polynomial and refit a model. The figure below shows the results of automatic fitting in this case that meet the error requirements.
 
 ![Metallic_Photonic_Crystal_Slab_modalfitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Metallic_Photonic_Crystal_Slab_modalfitting.png)
 

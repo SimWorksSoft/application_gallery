@@ -37,4 +37,5 @@ Under the default non-uniform mesh, the mesh size is automatically calculated ba
 
 At the accessory project, the spectrum transformed by Fourier transformation can be obtained in the time monitor (see the figure below). The results show that the received spectrum has resonance peaks not only at 200 THz inherent frequency of the source, but also at the subsequent frequencies, e.g., 400, 600 and 800 THz. It indicates that the second harmonic is generated when light interacts with the nonlinear material.
 
-![E_spectrum](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nonlinear_chi2_E_spectrum_log10.png)![H_spectrum](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nonlinear_chi2_H_spectrum_log10.png)
+![E_spectrum](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nonlinear_chi2_E_spectrum_log10_new.png)
+![H_spectrum](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nonlinear_chi2_H_spectrum_log10_new.png)

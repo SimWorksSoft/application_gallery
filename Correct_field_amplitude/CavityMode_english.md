@@ -17,7 +17,7 @@ The quality factor Q value is defined as the ratio of the center resonance wavel
 
 ## Device construction
 
-The resonant cavity used in this case is a tantalum oxide ($Ta_{2}O_{5}$) with hexagonal lattice air holes. In the simulation of photonic crystal structures, mesh partitioning is very important, and you must be sure to use the same mesh partitioning method for each periodic structural cell. In this case, a uniform override mesh is added to ensure the correct distribution of periodic cells. Due to the symmetry of the structure and the source, the `Anti-Symmetric` boundary conditions are used in the $X_{min} and Z_{min}$ directions, and the `Symmetric` boundary conditions are used in the $Y_{min}$ direction. The symmetric/anti-symmetric boundary conditions can be used to reduce the simulation region to 1/8, thus reducing the memory required for simulation.
+The resonant cavity used in this case is a tantalum oxide ($Ta_{2}O_{5}$) with hexagonal lattice air holes. In the simulation of photonic crystal structures, mesh partitioning is very important, and you must be sure to use the same mesh partitioning method for each periodic structural cell. In this case, a uniform override mesh is added to ensure the correct distribution of periodic cells. Due to the symmetry of the structure and the source, the `Symmetric` boundary conditions are used in the $X_{min}$ and $Z_{min}$ directions, and the `Anti-Symmetric` boundary conditions are used in the $Y_{min}$ direction. The symmetric/anti-symmetric boundary conditions can be used to reduce the simulation region to 1/8, thus reducing the memory required for simulation.
 
 ![cavity_mode_mesh](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_mesh.png)
 
@@ -37,8 +37,8 @@ Therefore, we only need to use `high Q analysis` group to calculate the Q value 
 
 Run the script file in the attachment to automatically run two simulations with simulation times of 500fs and 3000fs. The figure below shows the electric intensities obtained by the time monitors in the two simulations change over simulation time. It can be seen that when the simulation time of 500fs is not enough for the field to completely decay, the final field amplitude is inaccurate and needs to be corrected to compensate for the shorter simulation time.
 
-![cavity_mode_E2_signal_500](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_signal_500_release.3.0.png)
-![cavity_mode_E2_signal_3000](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_signal_3000_release.3.0.png)
+![cavity_mode_E2_signal_500](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_signal_500_beta3.3.6.png)
+![cavity_mode_E2_signal_3000](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_signal_3000_beta3.3.6.png)
 
 The figure below shows the original field distribution in the resonant cavity obtained from the `FDFP` monitor. Note that the field amplitude inside the cavity depends on the simulation time. If the simulation time is not long enough, the field amplitude will be smaller than it should be. The figure clearly indicates that when the simulation time is 500fs, the field amplitude is significantly smaller than that when the simulation time is 3000fs.
 
@@ -47,7 +47,7 @@ The figure below shows the original field distribution in the resonant cavity ob
 
 The figure below shows the electric intensity distributions after amplitude corrections that are obtained at simulation times of 500fs and 3000fs. The field amplitudes obtained at different simulation time are basically consistent after correction. It can be seen that the field simulated at 500fs is amplified to compensate for the shortened simulation time. The field scale factor obtained at the simulation time of 3000fs is approximately equal to 1. If the simulation runs long enough for the field to decay completely, the field need not be rescaled and the scale factor should be equal to 1.
 
-![cavity_mode_E2_Correct_500](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_Correct_500_relaese1.3.0.png)
-![cavity_mode_E2_Correct_3000](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_Correct_3000_relaese1.3.0.png)
+![cavity_mode_E2_Correct_500](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_Correct_500_beta3.3.6.png)
+![cavity_mode_E2_Correct_3000](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_Correct_3000_beta3.3.6.png)
 
 Note that although the simulation time is different, the calculated Q value is the same because the field distribution obtained in the two simulations is the same. Therefore, the simulation can end in a short time, with no need to end after the field has completely decayed. All information can be obtained from shorter simulations by amplitude corrections.

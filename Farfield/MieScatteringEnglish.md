@@ -16,7 +16,7 @@ Mie scattering is an effect that occurs when particles have a size comparable to
 
 ## Device introduction
 
-In this case, a `TFSF` light source is used to excite a dielectric particle with a diameter of $1.06\mu m$ and a refractive index of $n=2$. Since the particle is radially symmetric and the light source is symmetric in the $X$ direction but anti-symmetric in the $Y$ direction, the $X_{min}$ boundary employs an `Anti-symmetric` condition, while the $Y_{min}$ boundary uses a `Symmetric` condition.
+In this case, a `TFSF` light source is used to excite a dielectric particle with a diameter of $1.06\mu m$ and a refractive index of $n=2$. Since the particle is radially symmetric and the light source is symmetric in the $X$ direction but anti-symmetric in the $Y$ direction, the $X_{min}$ boundary employs a `Symmetric` condition, while the $Y_{min}$ boundary uses an `Anti-symmetric` condition.
 
 ## Source
 
@@ -34,13 +34,13 @@ Note: The box formed by the `FDFP` monitors must be enclosed, ensuring that all 
 
 ## Near-field result
 
-In the analysis group of `Far field from a closed box`, the near-field electric field distribution obtained by the six `FDFP` monitors of the box is shown in the diagram below. In the figure, we observe that the intensity of scattered light is maximum at the $zp$ monitor of the closed box when source excites the dielectric sphere along the $+Z$ propagation.
+The `FDFP` monitors in the analysis group can capture the electric field distribution of the particle's scattered field on the enclosed surfaces. These enclosed surfaces consist of the six faces of the cube. The electric field distributions on these surfaces are then unfolded according to their spatial positions, as shown in the figure below. `Symmetric` and `Anti-symmetric` boundary conditions were used in the attachment project, so the $xn$ and $yn$ monitors are not within the simulation region and thus have no simulation results. Their electric field distributions can be symmetrically obtained from the $xp$ and $yp$ monitors, respectively. As shown in the figure, after the light source propagates along the positive $Z$ axis and excites the dielectric sphere, the $zp$ monitor captures the maximum scattered light intensity.
 
 ![MieScattering_Enearfield](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_Enearfield.png)
 
 ## Far-field result
 
-After simulation, the analysis group will automatically run the analysis script to project the near-field data obtained from the `FDFP` monitors into the far field. By default, the far-field projection is located at a circle with a radius of $1m$. However, this far-field projection can be modified to any spatial location (as long as it satisfies the far-field conditions). The figure below shows the scattered field in the far-field at the $XY、 YZ、 XZ$ planes projected on the circle with a radius of 1m. Notably, the strongest scattering occurs in the positive $Z$ direction, which matches with the characteristic of Mie scattering where the scattering field predominantly concentrates along the positive direction of light propagation.
+After simulation, run the analysis script of the analysis group to project the near-field data obtained from the `FDFP` monitor to the far field. By default, the far-field projection is located at a circle with a radius of $1m$. However, this far-field projection can be modified to any spatial location (as long as it satisfies the far-field conditions). The figure below shows the scattered field in the far-field at the $XY、 YZ、 XZ$ planes projected on the circle with a radius of 1m. Notably, the strongest scattering occurs in the positive $Z$ direction, which matches with the characteristic of Mie scattering where the scattering field predominantly concentrates along the positive direction of light propagation.
 ![MieScattering_farfield1d](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_farfield1d.png)
 Running the attached script will generate a three-dimensional far-field radiation pattern for Mie scattering of the dielectric sphere. The result also visually reveals that the scattering direction of the sphere predominantly aligns with the positive $Z$ axis.
 ![MieScattering_farfield3d](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_farfield3d.png)

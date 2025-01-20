@@ -34,7 +34,7 @@ $$\varepsilon_{total}(f) =\varepsilon+\frac{\omega_{p}^{2}}{-(2\pi f)^2+j2\pi f\
 
 ## 反射、透射和吸收率
 
-根据 MIM 红外吸收器顶部和底部的`Frequency-Domain Field and Power(FDFP)`频域场-功率监视器得到的 T 数据，绘制出吸收器的反射率（R）透射率（T）吸收率（A）的图像，结果如下图所示，可以发现吸收器在$0.59616\mu m$处的峰值吸收率为$0.99733$，其结果与参考文献中的**Figure 2**高度一致。
+根据 MIM 红外吸收器顶部和底部的`Frequency-Domain Field and Power(FDFP)`频域场-功率监视器得到的 T 数据，绘制出吸收器的反射率（R）透射率（T）吸收率（A）的图像，结果如下图所示，波长在$0.595\mu m$左右，吸收器的吸收率达到峰值（$99\%$以上），其结果与参考文献中的**Figure 2**高度一致。
 
 ![InfraredAbsorber_ART](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/InfraredAbsorber_ART.png)
 
@@ -49,8 +49,6 @@ $$Q=\pi c\varepsilon_{0}\varepsilon''(\lambda) |E(\lambda)|^{2}\lambda$$
 其中，$c$为光速，$\varepsilon_{0}$为真空介电常数，$\varepsilon''(\lambda)$为介电常数的虚部，$E$为电场强度。MIM 红外吸收器在波长$\lambda=0.595\mu m$处的电阻热分布图如下。可以发现，电阻热$Q$大部分局限在上层的 Ag 立方体和氧化铝交界面的棱角处，较高的吸收率使得此波长下大部分能量通过损耗转化成了热能。
 
 ![InfraredAbsorber_Q](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/InfraredAbsorber_Q.png)
-
-## 附录
 
 # 参考文献
 

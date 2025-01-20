@@ -24,7 +24,7 @@ The THz metamaterial used in this case consists of a gallium arsenide (GaAs) sub
 
 ## Material
 
-The gold material is represented with the Drude model (which contains the plasma frequency $\omega_p$ and the collision frequency $\gamma_p$). At the low frequency limit ($\omega_p << \gamma_p$), the Drude model can be expressed as a simple conductive model, so this case uses the `Perfect electric condutor(PEC)` instead of gold.
+The gold material is represented with the Drude model (which contains the plasma frequency $\omega_p$ and the collision frequency $\gamma_p$). At the low frequency limit ($\omega_p << \gamma_p$), the Drude model can be expressed as a simple conductive model, so this case uses the `Perfect electric conductor(PEC)` instead of gold.
 
 # Simulation results
 
@@ -36,9 +36,13 @@ According to the T data obtained by the `Frequency-Domain Field and Power(FDFP)`
 
 ## Electric field distribution and surface current density
 
-The figure below shows the electric field distribution and the surface current density distribution on the surface of the metamaterial device when the resonance frequency is 0.66THz, plotted using the script file in the attachment. It can be seen from the figure that at the resonant frequency of 0.66THz, the electric field is highly concentrated at the split gap, and there is no obvious surface current on the metal wires connecting the metasurface cells.
+The attached script file can be used to plot the electric field distribution and surface current density distribution on the surface of the metamaterial device at a resonance frequency of 0.66THz. To plot the surface current density distribution, you need to click the `set` icon in the `Figure` window and configure it as shown in the figure below.
 
-![Active_THz_Metamaterial_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_E.png)![Active_THz_Metamaterial_K](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_K.png)
+![THzMaterial_figure_setting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/THzMaterial_figure_setting.png)
+
+The results are plotted in the figure below. At a resonance frequency of 0.66THz, the electric field is highly concentrated at the split gaps, and there is no significant surface current on the metal lines connecting the metasurface elements.
+
+![Active_THz_Metamaterial_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_E.png)![Active_THz_Metamaterial_K](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_K_new.png)
 
 # References
 

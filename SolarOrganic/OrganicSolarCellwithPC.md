@@ -25,7 +25,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/solar_o
 
 为了在仿真中建立 P3HT:PCBM、ITO、PEDOT:PSS 和铝的材料模型，我们需要在软件中添加新的 3D 采样数据模型并导入附件中对应材料的采样数据.txt 文件。下图中显示了在 400nm 到 700nm 的太阳光谱范围内，四种材料的拟合曲线。这些材料数据摘自文献[^5][^6][^7]。
 
-![solar_organic_PSS_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_PSS_fitting.png)![solar_organic_PCBM_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_PCBM_fitting.png)
+![solar_organic_PSS_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_PSS_fitting.png)![solar_organic_PCBM_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_material_PCBM.png)
 
 ![solar_organic_ITO_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_ITO_fitting.png)![solar_organic_Al_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_Al_fitting.png)
 
@@ -33,13 +33,13 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/solar_o
 
 通过光活性层顶部和底部的`FDFP`监视器中的 T 数据，可以绘制出光活性层的光吸收光谱图如下。可以看出光活性层在太阳光谱范围内尤其是 400nm-600nm 部分具有较高的吸收率。
 
-![solar_organic_Absorption](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_Absorption.png)
+![solar_organic_Absorption](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_Absorption_new.png)
 
 将附件中工程的六角晶格光子晶体结构组禁用后重新仿真可以得到无光子晶体结构的有机太阳能电池光活性层的吸收情况，绘制出在有和没有光子晶体时光活性层的吸收曲线如下图：
 
-![solar_organic_Absorption_without_PC](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_Absorption_without_PC.png)
+![solar_organic_Absorption_without_PC](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_Absorption_without_PC_new.png)
 
-如上图所示，在有光子晶体时有机太阳能电池的吸收率较无光子晶体结构，在 673nm 左右略有增强。这种增强是由于光子晶体本身的光子带隙造成的，可由能带结构分析组来进一步探究其能带结构。
+如上图所示，在有光子晶体时有机太阳能电池的吸收率较无光子晶体结构，在 670nm 左右略有增强。这种增强是由于光子晶体本身的光子带隙造成的，可由能带结构分析组来进一步探究其能带结构。
 
 # 参考文献
 

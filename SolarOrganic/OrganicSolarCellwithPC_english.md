@@ -25,7 +25,7 @@ The device construction method in this case is similar to the silicon-based sola
 
 To establish the material models of P3HT:PCBM, ITO, PEDOT:PSS and aluminum in the simulation, add a new 3D sampling data in the software and import the sampling data .txt file of the corresponding material in the attachment. The figure below shows the fitted curves for four materials in the solar spectrum range from 400nm to 700nm. These material data are extracted from references [^5][^6][^7].
 
-![solar_organic_PSS_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_PSS_fitting.png)![solar_organic_PCBM_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_PCBM_fitting.png)
+![solar_organic_PSS_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_PSS_fitting.png)![solar_organic_PCBM_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_material_PCBM.png)
 
 ![solar_organic_ITO_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_ITO_fitting.png)![solar_organic_Al_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_Al_fitting.png)
 
@@ -33,13 +33,13 @@ To establish the material models of P3HT:PCBM, ITO, PEDOT:PSS and aluminum in th
 
 Through the T data in the `FDFP` monitors on the top and bottom of the photoactive layer, the light absorption spectrum of the photoactive layer can be plotted as follows. It can be seen that the photoactive layer has a high absorptivity in the solar spectrum range, especially in the range of 400nm-600nm.
 
-![solar_organic_Absorption](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_Absorption.png)
+![solar_organic_Absorption](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_Absorption_new.png)
 
 The absorption of the photoactive layer of the OSC without PC structure can be obtained through re-simulation after the hexagonal-lattice PC structure group in the attachment is disabled. The absorption curves of the photoactive layer with and without PC structures are plotted as follows:
 
-![solar_organic_Absorption_without_PC](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_Absorption_without_PC.png)
+![solar_organic_Absorption_without_PC](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_Absorption_without_PC_new.png)
 
-As shown in the figure above, the absorptivity of the photoactive layer of the OSC with PC structures is slightly higher than that without PC structures at a wavelength of around 673nm. This enhancement is brought by the photonic bandgap of the PC itself, and its bandstructure can be further explored by the bandstructure analysis group.
+As shown in the figure above, the absorptivity of the photoactive layer of the OSC with PC structures is slightly higher than that without PC structures at a wavelength of around 670nm. This enhancement is brought by the photonic bandgap of the PC itself, and its bandstructure can be further explored by the bandstructure analysis group.
 
 # References
 

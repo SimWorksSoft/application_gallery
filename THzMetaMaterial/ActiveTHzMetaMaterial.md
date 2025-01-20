@@ -24,7 +24,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Active_
 
 ## 材料设置
 
-使用 Drude 模型（其中包含等离子体频率$\omega_p$和碰撞频率$\gamma_p$）来表示金材料。在低频极限（$\omega_p << \gamma_p$）时，Drude 模型可以表示为一个简单的导电模型，因此本案例使用`Perfect electric condutor(PEC)`完美电导体材料来代替金材料。
+使用 Drude 模型（其中包含等离子体频率$\omega_p$和碰撞频率$\gamma_p$）来表示金材料。在低频极限（$\omega_p << \gamma_p$）时，Drude 模型可以表示为一个简单的导电模型，因此本案例使用`Perfect electric conductor(PEC)`完美电导体材料来代替金材料。
 
 # 仿真结果
 
@@ -36,9 +36,13 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Active_
 
 ## 电场分布及表面电流密度
 
-下图为使用附件中的脚本文件绘制出的在共振频率为 0.66THz 时，超材料器件表面的电场分布以及表面电流密度分布图。从图中可以看出，在谐振频率 0.66THz 下，电场高度集中于分裂间隙处，超表面单元之间连接的金属线上没有明显的表面电流。
+使用附件中的脚本文件可以绘制出在共振频率为 0.66THz 时，超材料器件表面的电场分布以及表面电流密度分布图。其中表面电流密度分布图需要点击`Figure`窗口中的`set`图标，并按照下图设置。
 
-![Active_THz_Metamaterial_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_E.png)![Active_THz_Metamaterial_K](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_K.png)
+![THzMaterial_figure_setting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/THzMaterial_figure_setting.png)
+
+绘制出的结果如下图，可以看出在谐振频率 0.66THz 下，电场高度集中于分裂间隙处，超表面单元之间连接的金属线上没有明显的表面电流。
+
+![Active_THz_Metamaterial_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_E.png)![Active_THz_Metamaterial_K](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_K_new.png)
 
 # 参考文献
 

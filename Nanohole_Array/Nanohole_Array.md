@@ -21,24 +21,24 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/nanohol
 
 金属薄膜材料金的折射率样本参考自`CRC化学与物理手册`。根据材料数据拟合仿真模型，如下图所示，由图可以看出对应波段的折射率变化趋势。根据材料色散关系，可大致预测材料在 FDTD 仿真波段内的特性。
 
-![material](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_Au_material_fit_1.png)
+![material](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_Au_material_fit_release141.png)
 
 # 仿真结果
 
 打开附件工程，运行仿真之后运行脚本文件可得到所有目标数据。
 下图为`FDFP Monitor` `R`和`T`分别记录的反射和透射光谱，通过脚本文件计算可求得 R+T 光谱。从图中可以明显看出，大约在 675 nm 处有较强的共振现象。
 
-![R+T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_T_and_R_1.png)
+![R+T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_T_and_R_release141.png)
 
 如下图所示，将透射光谱归一化为空气孔的面积除以周期单元格的面积，可以看出部分波段的透射明显高于正常水平。
 
-![cw_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_T_normalized_1.png)
+![cw_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_T_normalized_release141.png)
 
 下图为金薄膜透射与反射两边表面的$|E|^2$分布图。虽然入射场强度仅为 1$V/m$，但是对比透射/反射分布图的强度，可以明显看出局域近场的增强非常显著。
 
-![abs(E)2_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_Transmitted_surface_E_1.png)
-![abs(E)2_R](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_reflected_surface_E_1.png)
+![abs(E)2_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_transmitted_surface_E_new.png)
+![abs(E)2_R](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_reflected_surface_E_release141.png)
 
 如下为 x=0 时 z-y 平面截面的场分布图。通过调整数据 colorbar 范围，可以清楚观察到哪些区域的近场强度被增强到 10 倍以上。
 
-![abs(E)2](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_zyplane_surface_E_1.png)
+![abs(E)2](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_zyplane_surface_E_new.png)

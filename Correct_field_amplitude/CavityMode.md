@@ -17,7 +17,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/cavity_
 
 ## 模型构建
 
-本案例中使用的谐振腔为一个具有六角晶格空气孔的氧化钽（$Ta_{2}O_{5}$）。在光子晶体结构的仿真中，网格的划分非常重要，需要保证每个周期结构单元的网格剖分方式相同。本案例中通过添加均匀覆盖网格来确保正确的周期单元分布。由于结构结构与光源的对称性，在$X_{min}、Z_{min}$方向上使用`Anti-Symmetric`反对称边界条件，在$Y_{min}$方向上使用`Symmetric`对称边界条件。使用对称/反对称边界条件可以将仿真区域缩小至 1/8，从而减少仿真需要的内存。
+本案例中使用的谐振腔为一个具有六角晶格空气孔的氧化钽（$Ta_{2}O_{5}$）。在光子晶体结构的仿真中，网格的划分非常重要，需要保证每个周期结构单元的网格剖分方式相同。本案例中通过添加均匀覆盖网格来确保正确的周期单元分布。由于结构结构与光源的对称性，在$X_{min}、Z_{min}$方向上使用`Symmetric`对称边界条件，在$Y_{min}$方向上使用`Anti-Symmetric`反对称边界条件。使用对称/反对称边界条件可以将仿真区域缩小至 1/8，从而减少仿真需要的内存。
 
 ![cavity_mode_mesh](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_mesh.png)
 
@@ -37,8 +37,8 @@ $$\vec{E}=\gamma\vec{E}_{simulation}$$
 
 运行附件中的脚本文件可以自动运行两个仿真时长分别为 500fs 和 3000fs 的模拟。下图为两次模拟中，时间监视器得到的电场强度随仿真时间的分布图。从图中可以看出，当 500fs 的模拟时间不足以让场完全衰减，所以最终得到的场幅值是不准确的，需要通过校正来弥补较短的仿真时长。
 
-![cavity_mode_E2_signal_500](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_signal_500_release.3.0.png)
-![cavity_mode_E2_signal_3000](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_signal_3000_release.3.0.png)
+![cavity_mode_E2_signal_500](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_signal_500_beta3.3.6.png)
+![cavity_mode_E2_signal_3000](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_signal_3000_beta3.3.6.png)
 
 下图为`FDFP`监视器中得到的谐振腔内原始的场分布。请注意，腔内的场幅值取决于仿真时长。如果仿真时间不够长，场幅值就会小于应有的值。从图中可以看出仿真时长为 500fs 时，场幅值明显小于仿真时长为 3000fs 时的幅值。
 
@@ -47,7 +47,7 @@ $$\vec{E}=\gamma\vec{E}_{simulation}$$
 
 下图为经过幅值校正后，500fs 和 3000fs 仿真时间得到的电场强度分布，不同仿真时长得到的场幅值经校正后得到基本一致的数值。可以看到 500fs 模拟的场被放大了，以补偿模拟时间的缩短，3000fs 仿真时间得到场比例因子约等于 1。如果模拟运行的时间足够长，场完全衰减，则无需重新缩放场，比例因子应等于 1。
 
-![cavity_mode_E2_Correct_500](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_Correct_500_relaese1.3.0.png)
-![cavity_mode_E2_Correct_3000](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_Correct_3000_relaese1.3.0.png)
+![cavity_mode_E2_Correct_500](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_Correct_500_beta3.3.6.png)
+![cavity_mode_E2_Correct_3000](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/cavity_mode_E2_Correct_3000_beta3.3.6.png)
 
 注意，虽然仿真时长不同，但计算得到的 Q 值是相同的，这是因为两个仿真中获取的场分布是相同的。所以不需要让仿真持续到场完全衰减。所有的信息都可以从较短的仿真中获取。

@@ -26,7 +26,7 @@ The absorption of the device can be greatly affected by the Si and Al materials.
 ## Transmission and Absorption
 
 The transmittance, absorptance, and reflectance can be plotted based on the T data obtained from the `FDFP` monitors at the top and bottom of the planar silicon solar cell. The figure shows that the transmittance of the entire cell is zero due to total reflection from the Al electrodes. The ripples in the reflectance are due to the Fabry-Perot effect.
-![SolarCells_RT](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SolarCells_RT.png)
+![SolarCells_RT](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SolarCells_RT_new.png)
 
 ## Generation rate and Short-circuit current
 
@@ -35,14 +35,14 @@ $$ G=\int\frac{-0.5 \omega|\vec{E}(\omega)|^2\cdot{imag[\varepsilon(\omega)]}}{\
 where $\varepsilon$ is the dielectric constant.
 Assuming that each absorbed photon excites an electron-hole pair, a photocurrent can be generated. The formula for the current is:
 $$I=eG$$
-The equation above calculates the short-circuit current by using the generation rate. The total short-circuit current of the solar cell can be found by integrating the current. The current density of the short-circuit current of the solar cell is calculated to be approximately $242.641 A/m^2$. As there is no change in the Z direction in this case, we can just observe the change of the photon generation rate along the X axis (refer to the below figure).  
-![SolarCells_GR](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SolarCells_GR.png)
+The equation above calculates the short-circuit current by using the generation rate. The total short-circuit current of the solar cell can be found by integrating the current. The current density of the short-circuit current of the solar cell is calculated to be approximately $218.01 A/m^2$. As there is no change in the Z direction in this case, we can just observe the change of the photon generation rate along the X axis (refer to the below figure).  
+![SolarCells_GR](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SolarCells_GR_new.png)
 
 ## Optimization of absorption efficiency (reduction of reflections)
 
 To address the issue of sunlight reflection off the solar cell during device operation, a $Si_3N_4$ (n=2.05) layer with 0.07$\mu$m is chosen as an anti-reflective layer (AR) to cover the surface of the solar cell. The AR structure should be changed to 'Enable' state in the software and re-run the simulation.
-![SolarCells_RT_with_AR](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SolarCells_RT_with_AR.png)![SolarCells_GR_with_AR](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SolarCells_GR_with_AR.png)
-The first figure above shows the absorption rate calculated from the simulation data, and the second figure shows the generation rate in the X-direction. The calculated photocurrent is approximately $341.962 A/m^2$, indicating a significant increase after the addition of the anti-reflective layer.
+![SolarCells_RT_with_AR](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SolarCells_RT_with_AR_new.png)![SolarCells_GR_with_AR](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SolarCells_GR_with_AR_new.png)
+The first figure above shows the absorption rate calculated from the simulation data, and the second figure shows the generation rate in the X-direction. The calculated photocurrent is approximately $309.532 A/m^2$, indicating a significant increase after the addition of the anti-reflective layer.
 
 # Appendixes
 

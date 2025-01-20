@@ -21,24 +21,24 @@ The 3D FDTD simulation is utilized to build a metal film structure with the peri
 
 For the metal film material, namely gold, the refractive index is taken from the sample reference given in the `CRC Handbook of Chemistry and Physics`. The simulation model that is fitted according to relevant material data is shown in the figure below, illustrating the trend of refractive index variations in the defined wavelength range. Based on the dispersion relation, the properties of the material within the wavelength range can be estimated.
 
-![material](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_Au_material_fit_1.png)
+![material](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_Au_material_fit_release141.png)
 
 # Simulation Results
 
 After opening the attached project file and performing the simulation, then running the script file, all the target data are obtained.
 The figure below displays the reflection and transmission spectra recorded by the `FDFP monitors` `R` and `T`. The R+T spectra are derived through calculations performed with the script file. In this graph, a significant resonance effect is observed at the wavelength of approximately 675 nm.
 
-![R+T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_T_and_R_1.png)
+![R+T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_T_and_R_release141.png)
 
 As shown in the figure below, the transmission spectrum is normalized by dividing the area of the air hole by that of the periodic cell. This normalization reveals that the transmission is significantly higher than the normal level in certain wavelength ranges.
 
-![cw_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_T_normalized_1.png)
+![cw_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_T_normalized_release141.png)
 
 The distribution plots of $|E|^2$ at the transmitted and reflected surfaces of the gold film are shown below. Although the intensity in the incident field is only 1$V/m$, a comparison of this intensity with the intensity of the transmission/reflection profiles shows that there is a significant enhancement in the local near-field.
 
-![abs(E)2_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_Transmitted_surface_E_1.png)
-![abs(E)2_R](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_reflected_surface_E_1.png)
+![abs(E)2_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_transmitted_surface_E_new.png)
+![abs(E)2_R](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_reflected_surface_E_release141.png)
 
 Below is the field distribution of the z-y plane section at x=0. By adjusting the range of the data colorbar, the regions where the near-field intensity has been increased by more than 10 times are clearly displayed.
 
-![abs(E)2](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_zyplane_surface_E_1.png)
+![abs(E)2](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_zyplane_surface_E_new.png)

@@ -16,7 +16,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/MieScat
 
 ## 模型简介
 
-本案例中使用总场散射场（Toal-Field Scattered-Field）`TFSF`光源激发一个直径为$1.06 \mu m$，折射率$n=2$的介质小球。由于小球是中心对称且光源在$X$方向上对称，在$Y$方向上反对称，所以$X_{min}$方向使用反对称`Anti-symmetric`边界条件，$Y_{min}$方向使用对称`symmetric`边界条件。
+本案例中使用总场散射场（Toal-Field Scattered-Field）`TFSF`光源激发一个直径为$1.06 \mu m$，折射率$n=2$的介质小球。由于小球是中心对称且光源在$X$方向上对称，在$Y$方向上反对称，所以$X_{min}$方向使用对称`Symmetric`边界条件，$Y_{min}$方向使用反对称`Anti-symmetric`边界条件。
 
 ## 光源设置
 
@@ -34,12 +34,14 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/MieScat
 
 ## 近场结果
 
-封闭盒外的远场分析组中，盒子表面的六个`FDFP`监视器得到的近场电场分布图如下图所示。从图中可以看到，光源沿着$Z$轴正向传播并激发介质球后，封闭盒子表面的$zp$监视器得到的散射光强最大。
+从分析组的`FDFP`监视器中，可以得到粒子的散射场在封闭表面上的电场分布。这里封闭表面是立方体的六个面，再将各个表面的电场分布按照空间位置展开如下图所示。附件工程中使用了对称和反对称边界条件，$xn、yn$监视器不在仿真区域内，没有仿真结果，其电场分布可以分别从$xp、yp$监视器中对称得到。从图中可以看到，光源沿着$Z$轴正向传播并激发介质球后，封闭盒子表面的$zp$监视器得到的散射光强最大。
+
 ![MieScattering_Enearfield](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_Enearfield.png)
 
 ## 远场结果
 
-仿真结束后，分析组会自动运行分析脚本，将`FDFP`监视器中得到的近场数据投影至远场。分析组缺省的远场投影位置为半径$1m$的圆上，远场投影可以被修改到任意空间位置（只需满足远场条件）。下图为$XY、YZ、XZ$面内半径$1m$的圆上得到的远场分布图，可以看出在$Z$轴正方向的散射最强，符合米氏散射中散射场主要集中在光源传播方向的特点。
+仿真结束后，运行分析组的分析脚本，将`FDFP`监视器中得到的近场数据投影至远场。分析组缺省的远场投影位置为半径$1m$的圆上，远场投影可以被修改到任意空间位置（只需满足远场条件）。下图为$XY、YZ、XZ$面内半径$1m$的圆上得到的远场分布图，可以看出在$Z$轴正方向的散射最强，符合米氏散射中散射场主要集中在光源传播方向的特点。
+
 ![MieScattering_farfield1d](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_farfield1d.png)
 运行附件中的脚本可以绘制出介质球米氏散射的三维远场辐射图如下，可以直观地看出介质球的散射方向为$Z$轴正向。
 ![MieScattering_farfield1d](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_farfield3d.png)

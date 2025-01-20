@@ -19,7 +19,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Metalli
 
 ## 材料设置
 
-本案例中，金属钨的介电常数会影响到器件的性能，故在模拟仿真之前，需要查看其在仿真波段内拟合的模型与数据点（Sampled data）的拟合误差。当拟合误差低于默认值（RMSE=0.1），拟合模型满足仿真需求；反之请调整拟合误差和多项式最大系数，重新拟合。下图展示了本案例中自动拟合的符合误差要求的结果。
+本案例中，金属钨的介电常数会影响到器件的性能，故在模拟仿真之前，需要查看其在仿真波段内拟合的模型是否满足仿真需求；如果不满足，请调整拟合误差和多项式最大系数，重新拟合。下图展示了本案例中自动拟合的符合误差要求的结果。
 
 ![Metallic_Photonic_Crystal_Slab_modalfitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Metallic_Photonic_Crystal_Slab_modalfitting.png)
 

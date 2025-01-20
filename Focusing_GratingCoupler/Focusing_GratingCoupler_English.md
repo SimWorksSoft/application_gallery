@@ -28,7 +28,9 @@ A confocal grating is used for the coupling grating part, and its process parame
 
 ## Source
 
-The light emitted from a step-type single-mode fiber is incident obliquely on the grating, which can be approximated as the field distribution of a `Gaussian` light source, so a Gaussian light source can be used in this example. It is only necessary to match the beam waist of the Gaussian source to the fiber core and to locate the source in the material of the fiber core. The Gaussian light source does not require mode-solving, so the fiber element model can be omitted and only the Gaussian light source can be placed above the grating structure.
+The incident light received by the focusing grating is typically emitted from a step-index-single-mode fiber. After leaving the fiber, the light directly enters the glass cladding at the top of the grating structure. Since the output light from the step-index single-mode fiber can be approximated as having a Gaussian field distribution, the step-index single-mode fiber itself is not modeled in this simulation project. Instead, the output light from the fiber is replaced with a `Gaussian` source. Therefore, when setting up a `Gaussian` source in the software, the following points should be noted:
+- The waist size of the `Gaussian` source should match the actual core size of the fiber being used.
+- The position of the `Gaussian` source's waist surface represents the contact point between the fiber and the top cladding of the grating, so the background material at the light source location should be set to *Silica(glass)*.
 
 # Simulation results
 
