@@ -28,13 +28,13 @@ Run the attached *Broadband_modesource_wire_multifreq.msf* script, which automat
 
 The injected pulse, the pulse propagated to the right side of the copper wire, and the back-scattering pulse are plotted over time when using the default mode source as follows:
 
-![Ex_singlefreq](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Broadband_modesource_Ex_singlefreq.png)
+![Ex_singlefreq](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Broadband_modesource_Ex_singlefreq_v4.3.1.png)
 
 It can be clearly seen that the mode of the center frequency does not match the mode of the whole frequency band, resulting in a large amount of back-scattering light. The injected pulse and back-scattering pulse interfere with each other and the signal is very unclear.
 
 
 The following figure shows a plot of the injected pulse, the pulse propagated to the right side of the copper wire, and the back-scattering pulse when the multi-frequency field function is turned on.
 
-![Ex_multifreq](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Broadband_modesource_Ex_multifreq.png)
+![Ex_multifreq](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Broadband_modesource_Ex_multifreq_v4.3.1.png)
 
 As can be seen from the figure, the injected pulse is very clear, with almost no backward scattering generated. The chirp signal due to dispersion as the injected pulse propagates along the copper wire to the right side is also very clean.

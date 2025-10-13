@@ -42,7 +42,7 @@ In this case, Gaussian source is used to simulate the fundamental mode in optica
 |       $Angle$ $&nbsp$ $Phi$       |   $45^o$    |
 | $Linearly$ $&nbsp$ $Polarization$ |   $90^o$    |
 
-![source](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/polarization_slitting_grating_coupler_source.png)
+![source](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/polarization_slitting_grating_coupler_source_1.png)
 
 # Simulation results
 

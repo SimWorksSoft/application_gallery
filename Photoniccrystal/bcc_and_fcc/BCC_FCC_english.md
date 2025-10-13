@@ -29,6 +29,6 @@ The construction and simulation Settings of the photonic crystal in this case ar
 
 Attachments contain project files for BCC- and FCC- lattice photonic crystal. Download and open the project files respectively. After running all the parameter sweeps, run the corresponding scripts to obtain the parameter sweep results and draw the bandstructure diagram, as shown in the following figure.
 
-![bcc_bandstructure.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/bcc_bandstructure.png)
+![bcc_bandstructure.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/bcc_bandstructure_vbeta_4_0_2.png)
 
-![fcc_bandstructure.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/fcc_bandstructure.png)
+![fcc_bandstructure.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/fcc_bandstructure_vbeta_4_0_2.png)

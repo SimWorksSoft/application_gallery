@@ -19,14 +19,17 @@ The 2D PC used in this example is composed of dielectric rods of radius $0.35\mu
 # Simulation results
 
 As shown in the figure below, when the radius of the dielectric rods on the diagonal is $0.35\mu m$, the PC is perfect periodic, and there is almost no diffraction phenomenon when the beam propagates along it; when the radius of the dielectric rods on the diagonal is 0, the beam is completely reflected at the diagonal (the line defect). The result reproduces **figure 2** of the Ref, demonstrating that the power ratio between the two splitted beams can be very well controlled by varying the radius of the defect rods.
-![PC_defect_E_r35](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_defect_E_r35.png)![PC_defect_E_r0](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_defect_E_r0.png)
+![PC_defect_E_r35](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_defect_E_r35_v4.3.1.png)
+![PC_defect_E_r0](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_defect_E_r0_v4.3.1.png)
 
 # Parameter analyses
 
 Run the parametric sweep of dielectric rods radius to study the effect of line defects of the PC. We can plot the normalized reflected/transmitted power as a function of the defect radius.
-![PC_defect_RT_vs_r](<https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_defect_RT_vs_r_Ours(Staircase).png>)
+![PC_defect_RT_vs_r](    
+https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_defect_RT_v4.3.1.png)
+
 As shown in the above figure, when the defect radius $r=0\mu m$, the beam passing through the structure is almost completely reflected at the line defect; when the defect radius $r=0.29\mu m$, the beam passing through the structure is half-reflected and half-transmitted; with the gradual increase of the defect radius to $r=0.35\mu m$, the PC is changed into a perfect periodic PC, and the beam passing through the structure can be completely transmitted. Therefore, by adjusting the defect radius, we can manipulate the propagation direction of the light beam to achieve the function of "optical switch". The electric field at a defect radius of r=0.29um is shown in the figure below. The incident light is half-transmissive and half-reflective, which is consistent with the conclusion obtained in the previous figure.
-![PC_defect_E_r29](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_defect_E_r29.png)
+![PC_defect_E_r29](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_defect_E_r29_v4.3.1.png)
 
 # References
 

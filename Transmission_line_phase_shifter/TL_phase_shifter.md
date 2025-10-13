@@ -38,16 +38,16 @@ NRI-TL结构中，中心导体带和接地导体平面可以使用理想电导�
 ## 单级结构仿真
 仿真结束后，附件中的*NRI_TL_phase_shifter.msf*脚本可以自动计算出光信号经过NRI-TL后的相移并与理论对比，如下图。理论计算时需要使用到传输线的$\epsilon_{eff}$，该值从`FDFP`监视器的解模得到的有效折射率计算得到：$\epsilon_{eff}=n_{eff}^{2}$
 
-![NRI_TL_result_stage1](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/NRI_TL_stage1.png)
+![NRI_TL_result_stage1](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/NRI_TL_stage1_beta4.2.3.png)
 
-从图中可以看出，理论计算与仿真出的结果非常接近，理论计算出的零相移频率为$f=0.985GHz$，仿真得到的零相移频率为$f=0.979GHz$，与设计值$1GHz$相差不到3%。
+从图中可以看出，理论计算与仿真出的结果非常接近，理论计算出的零相移频率为$f=0.995GHz$，仿真得到的零相移频率为$f=0.986GHz$，与设计值$1GHz$相差不到2%。
 
 ## 多级结构仿真
 附件中的*NRI_TL_phase_shifter_sweep.msf*脚本可以自动创建并运行三个工程文件，分别为单级CPW单元、2级CWP单元串联和4级CWP单元串联的工程。仿真结束后，脚本还将自动计算出每个工程中得到的相移结果，并生成仿真结果与理论结果对比的曲线图如下。
 
-![NRI_TL_result_multiple_stages](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/NRI_TL_multiple_stages.png)
+![NRI_TL_result_multiple_stages](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/NRI_TL_multiple_stages_beta4.2.3.png)
 
-显然，随着CPW级数的增加，相位的斜率也会增加，可以实现更大的相移。仿真结果和理论计算出的零相移频率分别为$f=0.979GHz$和$f=0.985GHz$，误差小于3%，且与级数无关。这个现象完全符合论文[^1]中的结论。
+显然，随着CPW级数的增加，相位的斜率也会增加，可以实现更大的相移。仿真结果和理论计算出的零相移频率分别为$f=0.983GHz$和$f=0.995GHz$，误差小于2%，且与级数无关。这个现象完全符合论文[^1]中的结论。
 
 # 参考文献
 [^1]: Antoniades, Marco A., and George V. Eleftheriades., Compact linear lead/lag metamaterial phase shifters for broadband applications., IEEE Antennas and Wireless Propagation Letters, pp.103-106, (2003).

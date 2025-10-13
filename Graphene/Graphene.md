@@ -40,7 +40,7 @@ Chu[^1]等人研究了一种基于单层和多层掺杂的石墨烯可调谐的�
 # 仿真结果
 
 本案例中，石墨烯使用了 0.265eV 和 0.217eV 两个化学势（即费米能级），石墨烯层数使用了 1 和 4。材料参数参考[^1]中的设置，该文章当中石墨烯为近似 Drude 的模型，本案例中石墨烯材料由包含带内电导和带间电导的全表面电导模型进行拟合。
-打开附件工程，并运行嵌套扫描`graph_layers`（注意，在本案例中需要在`Cloud`选项当中选择`Full size`并勾选`Optimizations and Sweep download children projects`以保存子工程），即可获得对应不同石墨烯费米能级和层数的透射率（见下图），该结果与参考文献[^1]图 3(a)所示的结果非常匹配。仿真结果显示石墨烯费米能级的增加会使共振波长蓝移，调制强度也会随着石墨烯层数的增加而增加。
+打开附件工程，并运行`Graphene_metamaterial.msf`脚本，即可获得对应不同石墨烯费米能级和层数的透射率（见下图），该结果与参考文献[^1]图 3(a)所示的结果非常匹配。仿真结果显示石墨烯费米能级的增加会使共振波长蓝移，调制强度也会随着石墨烯层数的增加而增加。
 
 ![transmission](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/graphene_transmission_new.png)
 

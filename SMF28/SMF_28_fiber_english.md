@@ -26,7 +26,7 @@ In this case, the FDE 2D simulation method is used for mode solving purposes. Th
 
 After opening the attachment project, setting the central wavelength to $1.55\mu m$ and executing `Model analysis`, the first mode solved is considered as the fundamental mode. The profile of this fundamental mode is shown in the figure below.
 
-![TE0](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SMF_28_FDE_mode_solver_TE0.png)
+![TM0](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SMF_28_FDE_mode_solver_TM0.png)
 
 The following describes the study on the transmission properties of SMF-28 optical fiber. For this purpose, disable symmetric/anti-symmetric boundary conditions, and set all boundaries as PEC. Then switch to `Frequency sweep analysis`, and set the wavelength range to $1.26\mu m$ ~ $1.66\mu m$ specifically for optical communication. After the simulation is completed, the trend of the effective refractive index of the fundamental mode as a function of wavelength is obtained, as shown in the figure below. For the fundamental mode, the effective refractive index is greater than the cladding refractive index over the entire wavelength range. As a result, the fundamental mode is effectively confined within the fiber core.
 

@@ -30,6 +30,18 @@ The linear superposition rule for the far-field projection is illustrated in the
 Note: The box formed by the `FDFP` monitors must be enclosed, ensuring that all sources and structures are inside the box. There should be no light sources or structures intersecting or passing through the surface of the box.
 ![MieScattering_analysisgroup](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_analysisgroup.png)
 
+## Simulation Resource
+
+**Note:** In the latest SimWorks Finite Difference Solutions v2.0.0, we recommend users adopt the following configurations for simulations in the current version:
+
+- Cloud: Choose CPU or single-GPU resource;
+- Local: Choose CPU or single-GPU resource;
+- Remote: Set a single _mpi hosts_. When selecting the CPU of the host, set the number of processes to 1, or select a single GPU of the host.
+
+For detailed setup instructions, please refer to the [Computing Resources](https://www.simworks.net/knowledge-base/User-Manual_computing-resources).
+
+We will continue to optimize product performance and address the potential computational issues with TFSF sources in multi-GPU/MPI computing in subsequent versions. For technical support, please feel free to contact us.
+
 # Simulation results
 
 ## Near-field result
@@ -40,7 +52,8 @@ The `FDFP` monitors in the analysis group can capture the electric field distrib
 
 ## Far-field result
 
-After simulation, run the analysis script of the analysis group to project the near-field data obtained from the `FDFP` monitor to the far field. By default, the far-field projection is located at a circle with a radius of $1m$. However, this far-field projection can be modified to any spatial location (as long as it satisfies the far-field conditions). The figure below shows the scattered field in the far-field at the $XY、 YZ、 XZ$ planes projected on the circle with a radius of 1m. Notably, the strongest scattering occurs in the positive $Z$ direction, which matches with the characteristic of Mie scattering where the scattering field predominantly concentrates along the positive direction of light propagation.
+After simulation, run the analysis script of `Far field from a closed box` analysis group to project the near-field data obtained from the `FDFP` monitor to the far field. By default, the far-field projection is located at a circle with a radius of $1m$. However, this far-field projection can be modified to any spatial location (as long as it satisfies the far-field conditions). The figure below shows the scattered field in the far-field at the $XY、 YZ、 XZ$ planes projected on the circle with a radius of 1m. Notably, the strongest scattering occurs in the positive $Z$ direction, which matches with the characteristic of Mie scattering where the scattering field predominantly concentrates along the positive direction of light propagation.
 ![MieScattering_farfield1d](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_farfield1d.png)
-Running the attached script will generate a three-dimensional far-field radiation pattern for Mie scattering of the dielectric sphere. The result also visually reveals that the scattering direction of the sphere predominantly aligns with the positive $Z$ axis.
-![MieScattering_farfield3d](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_farfield3d.png)
+
+Running the analysis script of `Directivity` analysis group will generate a three-dimensional far-field radiation pattern for Mie scattering of the dielectric sphere. The result also visually reveals that the scattering direction of the sphere predominantly aligns with the positive $Z$ axis.
+![MieScattering_farfield3d](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_farfield3d_beta4.1.4.png)

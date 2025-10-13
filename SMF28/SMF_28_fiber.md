@@ -26,7 +26,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/SMF_28_
 
 打开附件工程，在 FDE 当中，设置$1.55\mu m$的中心波长，运行`Model analysis`，解模结果中的第一个模式即为基模，其模式轮廓图如下图所示
 
-![TE0](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SMF_28_FDE_mode_solver_TE0.png)
+![TM0](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SMF_28_FDE_mode_solver_TM0.png)
 
 下面研究 SMF-28 光纤的传输特性。此时禁用对称/反对称边界条件，将边界都设置为 PEC，切换到`Frequency sweep analysis`，波长范围设置为光通信波段$1.26\mu m$ ~ $1.66\mu m$。运行结束后，得到基模等效折射率随波长变化的趋势，如下图所示。对于基模来说，其等效折射率在整个波长范围内都大于包层折射率，因此基模被很好地限制在纤芯中。
 

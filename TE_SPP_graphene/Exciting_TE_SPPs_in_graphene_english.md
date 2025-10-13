@@ -20,7 +20,7 @@ In this case, as described in the reference, we model the structure shown in the
 
 ## Material
 
-At a wavelength of 1.31 $\mu m$, the substrate material $SiO_2$ used in this structure has a refractive index of 1.4468. The PC structure consists of alternating layers of $TiO_2$ (refractive index: 2.7204) and $SiO_2$ (refractive index: 1.4468). The topmost layer is made of PMMA with a refractive index of 1.481, and the background material is air with a refractive index of 1. For the graphene material, the scattering rate and chemical potential are set to 0.11 meV and 0.05 eV respectively, as shown in the fitting curve below. For more parameters and details, see [Graphene](/localhost/knowledge-base/User-Manual_graphene-material).
+At a wavelength of 1.31 $\mu m$, the substrate material $SiO_2$ used in this structure has a refractive index of 1.4468. The PC structure consists of alternating layers of $TiO_2$ (refractive index: 2.7204) and $SiO_2$ (refractive index: 1.4468). The topmost layer is made of PMMA with a refractive index of 1.481, and the background material is air with a refractive index of 1. For the graphene material, the scattering rate and chemical potential are set to 0.11 meV and 0.5 eV respectively, as shown in the fitting curve below. For more parameters and details, see [Graphene](/localhost/knowledge-base/User-Manual_graphene-material).
 
 ![graphene_fit](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/surface_plasmon_in_graphene_material_fit.png)
 

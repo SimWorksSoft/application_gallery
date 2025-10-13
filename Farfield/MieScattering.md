@@ -30,6 +30,18 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/MieScat
 注意：`FDFP`监视器组成的盒子必须封闭，须保证所有源和结构被囊括其中，不能存在与盒子相切或者穿越盒子表面的光源或者结构。
 ![MieScattering_analysisgroup](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_analysisgroup.png)
 
+## 仿真资源
+
+**注意：** 在 SimWorks Finite Difference Solutions v2.0.0 最新版本中，我们建议用户按照以下配置进行 TFSF 光源的仿真：
+
+- Cloud 资源：选择 CPU 或单 GPU 仿真资源；
+- Local 资源：选择 CPU 或单 GPU 仿真资源；
+- Remote 资源：设置单个 _mpi hosts_ ，选择该主机的 CPU 时设置其进程数为 1，或者选择该主机的单个 GPU 资源。
+
+具体设置页面请参阅[计算资源](https://www.simworks.net/zh-CN/knowledge-base/User-Manual_computing-resources)。
+
+我们将持续优化产品性能，并在后续版本中解决 TFSF 光源在多 GPU 或 MPI 计算中可能出现的计算异常问题。如需技术支持，欢迎随时与我们联系。
+
 # 仿真结果
 
 ## 近场结果
@@ -40,8 +52,9 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/MieScat
 
 ## 远场结果
 
-仿真结束后，运行分析组的分析脚本，将`FDFP`监视器中得到的近场数据投影至远场。分析组缺省的远场投影位置为半径$1m$的圆上，远场投影可以被修改到任意空间位置（只需满足远场条件）。下图为$XY、YZ、XZ$面内半径$1m$的圆上得到的远场分布图，可以看出在$Z$轴正方向的散射最强，符合米氏散射中散射场主要集中在光源传播方向的特点。
+仿真结束后，运行`Far field from a closed box`分析组的分析脚本，将`FDFP`监视器中得到的近场数据投影至远场。分析组缺省的远场投影位置为半径$1m$的圆上，远场投影可以被修改到任意空间位置（只需满足远场条件）。下图为$XY、YZ、XZ$面内半径$1m$的圆上得到的远场分布图，可以看出在$Z$轴正方向的散射最强，符合米氏散射中散射场主要集中在光源传播方向的特点。
 
 ![MieScattering_farfield1d](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_farfield1d.png)
-运行附件中的脚本可以绘制出介质球米氏散射的三维远场辐射图如下，可以直观地看出介质球的散射方向为$Z$轴正向。
-![MieScattering_farfield1d](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_farfield3d.png)
+
+运行`Directivity`分析组的脚本可以绘制出介质球米氏散射的三维远场辐射图如下，可以直观地看出介质球的散射方向为$Z$轴正向。
+![MieScattering_farfield1d](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MieScattering_farfield3d_beta4.1.4.png)

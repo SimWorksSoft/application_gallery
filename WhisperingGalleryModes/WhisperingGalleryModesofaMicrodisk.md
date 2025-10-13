@@ -19,7 +19,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Whisper
 
 # 仿真结果
 
-下图显示了`FDFP`监视器中得到的光谱，从图中可以看出，共振波长分别为$404.7nm、412.2nm、428.5nm、441.3nm$。如果想要获得更加准确的结果，可以使用更加精细的网格。
+下图显示了`FDFP`监视器中得到的光谱，从图中可以看出，共振波长分别为$404.8nm、418.2nm、428.6nm、441.4nm$。如果想要获得更加准确的结果，可以使用更加精细的网格。
 
 ![WhisperGalleryMicrodisk_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/WhisperGalleryMicrodisk_E.png)
 

@@ -26,12 +26,12 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/reso
 
 使用默认模式源时，注入脉冲、传播至铜线右侧的脉冲以及后向散射的脉冲随时间变化图如下：
 
-![Ex_singlefreq](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Broadband_modesource_Ex_singlefreq.png)
+![Ex_singlefreq](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Broadband_modesource_Ex_singlefreq_v4.3.1.png)
 
 可以清楚地看到，中心频率求解的模式与整个频段的模式不匹配，导致产生大量的后向散射。注入脉冲与后向散射相互干扰，信号很不清晰。
 
 下图为开启多频解模功能后，模式源的注入脉冲、传播至铜线右侧时的脉冲以及注入时产生的后向散射的脉冲随时间变化的图。
 
-![Ex_multifreq](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Broadband_modesource_Ex_multifreq.png)
+![Ex_multifreq](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Broadband_modesource_Ex_multifreq_v4.3.1.png)
 
 从图中可以看出，注入脉冲的时域场非常清晰，几乎没有产生后向散射。注入脉冲沿着铜线传播至右侧时由于色散产生的啁啾信号也非常干净。

@@ -29,6 +29,6 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/BCC-FCC
 
 附件为 BCC 与 FCC 晶格光子晶体模型的工程文件。分别下载并打开工程文件，运行完成所有的参数扫描后，运行对应的脚本文件获取扫描结果并绘制能带结构图，如图所示。
 
-![bcc_bandstructure.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/bcc_bandstructure.png)
+![bcc_bandstructure.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/bcc_bandstructure_vbeta_4_0_2.png)
 
-![fcc_bandstructure.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/fcc_bandstructure.png)
+![fcc_bandstructure.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/fcc_bandstructure_vbeta_4_0_2.png)

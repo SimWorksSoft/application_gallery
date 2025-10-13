@@ -27,6 +27,18 @@ The refractive index of the isotropic waveguide core in this model is 1.5. As sh
 
 Detailed information such as the object of the simulation model can be found in the attached project file nr_waveguide3d.mpps. In general, in order to calculate the complete bandstructure of the target structure, the dipole array is used as the input source that is set to the target frequency range. All the above-mentioned notices have been detailed in the bandstructure-related case. (See [Bandstructure of 2D Square Lattice](/localhost/case-detail/bandstructure-of-2d-square-lattice) for a detailed example of bandstructure simulation.) However, for this case, our goal is to find the influence of the waveguide material on the mode, and we only observe how the bandstructure changes with the adjustment of the waveguide system, so we use the mode source here instead of the dipole array. The mode source can solve the incident pattern, which converges more quickly. It can be found that the waveguide in this case supports two modes of TM and TE. Since these two modes are orthogonal, we construct two mode sources to inject two modes of TE and TM respectively, and solve these two modes in the wavelength range of 1.5 μm to 1.6 μm.
 
+## Simulation Resource
+
+**Note:** In this project, the mesh number along the z-axis does not meet the minimum requirements for multi-GPU or MPI computing. To ensure simulation accuracy, we recommend using a single-CPU process or single-GPU configuration for this simulation. The simulation resource is as follows:
+
+- Cloud: Choose CPU or single-GPU resource;
+- Local: Choose CPU or single-GPU resource;
+- Remote: Set a single _mpi hosts_. When selecting the CPU of the host, set the number of processes to 1, or select a single GPU of the host.
+
+For detailed setup instructions, please refer to the [Computing Resources](https://www.simworks.net/knowledge-base/User-Manual_computing-resources).
+
+For further technical support, please feel free to contact us.
+
 # Simulation results
 
 The attachment nr_waveguide3d.mpps is the project file for this case. After downloading, the resonance spectrum under a specific wave vector can be obtained. Parameter sweeps were run to obtain the resonance spectrum at different wave vectors $k$. To speed up the operation, only five points are selected from the range $k_z = 5.6e ^{6}$~ $6.2e^{6} rad/m$. Running the parameter sweep can calculate the resonance spectrum at five different wave vectors. Once you're done, load and run the nr_waveguide3d.msf file to calculate the effective refractive index and propagation constant.

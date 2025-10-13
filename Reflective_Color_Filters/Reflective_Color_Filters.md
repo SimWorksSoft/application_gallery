@@ -44,7 +44,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Reflect
 
 ![FDFP_monitor](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Reflective_Color_Filters_FDFP_monitor.png)
 
-# 参数分析 e
+# 参数分析
 
 ## 反射率谱和色度图坐标
 

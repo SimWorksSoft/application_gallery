@@ -41,3 +41,6 @@
 | [SMF-28 Fiber Mode Calculation](https://www.emsimworks.com/case-detail/smf-28-fiber-mode-calculation) | SMF28.zip | Release1.2.1.build2406121728 | HPC Intel 8Core+16G |
 | [Lithography Using Alternating Phase Shift Mask](https://www.emsimworks.com/case-detail/lithography-using-alternating-phase-shift-mask) | Lithography_using_APSM.zip | Release1.4.1.build2412021806 | HPC Intel 8Core+16G |
 | [Metalens Based on PB Phase](https://www.simworks.net/zh-CN/case-detail/metalens-based-on-pb-phase) | MetalensBasedonPBPhase.zip | v3.0Beta 3.4.1build2501061614 | Intel 12Core+24GB RTX3090 |
+| [Diffraction Grating](https://www.simworks.net/zh-CN/case-detail/diffraction-grating) | Diffraction_grating.zip | v4.0Beta 4.1.4build2507081053 | Intel 12Core+24GB RTX3090 |
+| [Focusing with a single subwavelength aperture](https://www.simworks.net/zh-CN/case-detail/focusing-with-slit) | Focusing-with-slit.zip | v4.0Beta 4.2.6 build2508251625 | Intel 16Core+60GB A10 |
+| [Using grating projections calculate fields at an arbitrary location](https://www.simworks.net/zh-CN/case-detail/using-grating-projections-calculate-fields-at-an-arbitrary-location) | solvers_propagate_periodic.zip | v4.0Beta 4.3.1build2509151454| Intel 16Core+60GB A10 |

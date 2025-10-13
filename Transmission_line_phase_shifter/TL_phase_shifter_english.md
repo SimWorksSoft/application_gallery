@@ -37,16 +37,16 @@ The figure below shows the simulation structure of 4-stage CPW units. The `FDFP`
 ## Single Stage
 After the simulation, the attached *NRI_TL_phase_shifter.msf* script can automatically calculate the phase shift of the optical signal after passing through the NRI-TL and compare it with the theoretical values as shown in the figure below. The theoretical calculation requires the effective permittivity $\epsilon_{eff}$ of the transmission line, which is obtained from the mode solved by the `FDFP` monitor: $\epsilon_{eff}=n_{eff}^{2}$.
 
-![NRI_TL_result_stage1](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/NRI_TL_stage1.png)
+![NRI_TL_result_stage1](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/NRI_TL_stage1_beta4.2.3.png)
 
-The figure shows that the theoretical and the simulation results are very close. The theoretical zero phase shift occurs $f=0.985GHz$, while the simulated zero phase shift occurs $f=0.979GHz$, which indicates less than 3% difference from the design value of $1GHz$.
+The figure shows that the theoretical and the simulation results are very close. The theoretical zero phase shift occurs $f=0.995GHz$, while the simulated zero phase shift occurs $f=0.986GHz$, which indicates less than 2% difference from the design value of $1GHz$.
 
 ## Multiple Stages
 The attached script *NRI_TL_phase_shifter_sweep.msf* can automatically create and run three project files: a 1-stage CPW unit, 2-stage CPW units, and 4-stage CPW units. After the simulation, the script will also automatically calculate the phase shift results obtained for each project and generate a comparison graph of the simulation results against the theoretical results, as shown below.
 
-![NRI_TL_result_multiple_stages](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/NRI_TL_multiple_stages.png)
+![NRI_TL_result_multiple_stages](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/NRI_TL_multiple_stages_beta4.2.3.png)
 
-Obviously, as the number of CPW stages increases, the slope of the phase also increases, allowing for a larger phase shift. The zero phase shift frequency obtained from the simulation and the theoretical calculation are $f=0.979GHz$ and $f=0.985GHz$, respectively, with an error of less than 3%, and it is independent of the number of stages. This phenomenon is completely consistent with the conclusion in the paper [^1].
+Obviously, as the number of CPW stages increases, the slope of the phase also increases, allowing for a larger phase shift. The zero phase shift frequency obtained from the simulation and the theoretical calculation are $f=0.983GHz$ and $f=0.995GHz$, respectively, with an error of less than 3%, and it is independent of the number of stages. This phenomenon is completely consistent with the conclusion in the paper [^1].
 
 # References
 [^1]: Antoniades, Marco A., and George V. Eleftheriades., Compact linear lead/lag metamaterial phase shifters for broadband applications., IEEE Antennas and Wireless Propagation Letters, pp.103-106, (2003).

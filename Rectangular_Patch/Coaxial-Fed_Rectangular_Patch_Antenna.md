@@ -27,18 +27,18 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/reso
 
 # 仿真结果
 ## 反射
-打开 *rectangular_patch.mpps* 文件并运行仿真后，*rectangular_patch.msf* 脚本将用于生成贴片天线的性能和辐射性能。从同轴波导中的port 1（S11）看到的反射（回波损耗=10log10|S11|）如下图。从中可以看到仿真出的贴片天线的谐振频率为$9.96 GHz$ ，与理论谐振频率$10 GHz$ 相差$0.4 \%$.
+打开 *rectangular_patch.mpps* 文件并运行仿真后，*rectangular_patch.msf* 脚本将用于生成贴片天线的性能和辐射性能。从同轴波导中的port 1（S11）看到的反射（回波损耗=10log10|S11|）如下图。从中可以看到仿真出的贴片天线的谐振频率为$9.97 GHz$ ，与理论谐振频率$10 GHz$ 相差$0.3 \%$.
 
-![loss](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_loss.png)
+![loss](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_loss_vbeta3.5.2.png)
 
-*rectangular_patch.msf* 脚本还可以得到天线的输入阻抗，如下图。可以看到天线的输入阻抗在谐振频率下达到 $40.96 \Omega$
+*rectangular_patch.msf* 脚本还可以得到天线的输入阻抗，如下图。可以看到天线的输入阻抗在谐振频率下达到 $40 \Omega$
 
-![impedance](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_impedance.png)
+![impedance](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_impedance_vbeta3.5.2.png)
 
 ## 方向性
 方向性分析组用于计算共振频率下的远场。*rectangular_patch.msf* 脚本会运行分析组并生成天线在E平面（XZ平面）和H平面（YZ平面）上的方向性分布图，并将其于理论[^1]对比，如下图。在E平面上，理论和仿真出的$D_{\theta}$大致吻合，$D_{\phi}$远低于$-80 dB$，与理论吻合。
 
-![directivity_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_directivity_E.png)
+![directivity_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_directivity_E_vbeta3.5.2.png)
 
 在 H 平面上，仿真结果和理论得到的$D_{\phi}$非常接近，如下图。
 
@@ -46,20 +46,20 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/reso
 
 可以将E平面以及H平面的方向性画在极坐标的图中，如下图。E平面的不对称是由于馈电位置再ZX面的不对称导致的。
 
-![directivity_pattern](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_directivity_pattern.png)
+![directivity_pattern](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_directivity_pattern_vbeta3.5.2.png)
 
 ## 辐射性能
 运行*rectangular_patch.msf* 脚本后天线的辐射性能将会自动显示在脚本行命令窗口中，结果如下：
 ```msf
 ============Radiation Performance==============
-Resonant Frequency: 9.96 GHz
-Input Power: 2.52 nW
-Accepted Power: 2.5 nW
-Radiated Power: 2.5 nW
-Radiation Efficiency from Input Power: 99 Percent
+Resonant Frequency: 9.97 GHz
+Input Power: 1.26 nW
+Accepted Power: 1.24 nW
+Radiated Power: 1.24 nW
+Radiation Efficiency from Input Power: 98.8 Percent
 Radiation Efficiency from Accepted Power: 100 Percent
 Maximum Directivity: 7.88 dB
-Total Realized Gain: 7.84 dB
+Total Realized Gain: 7.83 dB
 =======================================
 ```
 由于谐振频率下的$S11$值非常小，因此输入功率和接收功率相等。因此，两种定义的辐射效率值大致相等。

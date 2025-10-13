@@ -28,18 +28,18 @@ The Directivity analysis group is used to set up the monitors and find the direc
 
 # Simulation results
 ## Reflection
-After opening the *rectangular_patch.mpps* and running the simulation, the *rectangular_patch.msf* script is used to generate the patch antenna’s performance and radiation properties. The reflection (return loss = 10log10|S11|) seen from port 1 (S11) in the coaxial waveguide is shown below. It can be seen that the resonant frequency of the simulated patch antenna is $9.96 GHz$, which is $0.4\%$ different from the theoretical resonant frequency of $10 GHz$.
+After opening the *rectangular_patch.mpps* and running the simulation, the *rectangular_patch.msf* script is used to generate the patch antenna’s performance and radiation properties. The reflection (return loss = 10log10|S11|) seen from port 1 (S11) in the coaxial waveguide is shown below. It can be seen that the resonant frequency of the simulated patch antenna is $9.97 GHz$, which is $0.3\%$ different from the theoretical resonant frequency of $10 GHz$.
 
-![loss](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_loss.png)
+![loss](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_loss_vbeta3.5.2.png)
 
-*rectangular_patch.msf* can also calculate the input impedance of the antenna, as it shown below. It can be seen that the input impedance of the antenna reaches $40.96 \Omega$ at the resonant frequency.
+*rectangular_patch.msf* can also calculate the input impedance of the antenna, as it shown below. It can be seen that the input impedance of the antenna reaches $40 \Omega$ at the resonant frequency.
 
-![impedance](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_impedance.png)
+![impedance](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_impedance_vbeta3.5.2.png)
 
 ## Directivity
 The directivity analysis group is used to calculate the farfields at the resonant frequency. The *rectangular_patch.msf* script generates plots of the antenna’s directivity in the E-plane (X-Z cut) and H-plane (Y-Z cut) and compares them to theory[^1]. In the E-plane, the $D_{\theta}$ between theory and FDTD general match, the $D_{\theta}$ is well below -80 dB in the E-plane, matching the theory.
 
-![directivity_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_directivity_E.png)
+![directivity_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_directivity_E_vbeta3.5.2.png)
 
 In the H-plane, the simulation results are very close to the $D_{\phi}$ obtained from theory, as follows.
 
@@ -47,21 +47,21 @@ In the H-plane, the simulation results are very close to the $D_{\phi}$ obtained
 
 The directivity of the E-plane as well as the H-plane can be plotted in polar coordinates as follows. The asymmetry of the E-plane is due to the asymmetry of the feed position along the ZX-plane.
 
-![directivity_pattern](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_directivity_pattern.png)
+![directivity_pattern](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Rectangular_patch_directivity_pattern_vbeta3.5.2.png)
 
 ## Radiation performance
 After running the *rectangular_patch.msf* script the radiation performance of the antenna will be automatically displayed in the script console window with the following results:
 
 ```msf
 ============Radiation Performance==============
-Resonant Frequency: 9.96 GHz
-Input Power: 2.52 nW
-Accepted Power: 2.5 nW
-Radiated Power: 2.5 nW
-Radiation Efficiency from Input Power: 99 Percent
+Resonant Frequency: 9.97 GHz
+Input Power: 1.26 nW
+Accepted Power: 1.24 nW
+Radiated Power: 1.24 nW
+Radiation Efficiency from Input Power: 98.8 Percent
 Radiation Efficiency from Accepted Power: 100 Percent
 Maximum Directivity: 7.88 dB
-Total Realized Gain: 7.84 dB
+Total Realized Gain: 7.83 dB
 =======================================
 ```
 The input power and accepted power are equal due to the extremely small value of $S11$ at the resonant frequency. As a result, both definitions of radiation efficiencies are roughly the same value.

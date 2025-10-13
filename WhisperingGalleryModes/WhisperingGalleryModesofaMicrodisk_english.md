@@ -19,7 +19,7 @@ To avoid serious destructive interference, the dipole sources in this example ca
 
 # Simulation results
 
-The figure below shows the spectrum obtained from the `FDFP` monitor. As can be seen from the figure, the resonance wavelengths are $404.7nm, 412.2nm, 428.5nm,$ and $441.3nm$ respectively. To obtain more accurate results, you can use a finer mesh.
+The figure below shows the spectrum obtained from the `FDFP` monitor. As can be seen from the figure, the resonance wavelengths are $404.8nm, 418.2nm, 428.6nm,$ and $441.4nm$ respectively. To obtain more accurate results, you can use a finer mesh.
 
 ![WhisperGalleryMicrodisk_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/WhisperGalleryMicrodisk_E.png)
 

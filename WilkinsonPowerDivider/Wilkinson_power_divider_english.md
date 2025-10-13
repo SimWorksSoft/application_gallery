@@ -4,7 +4,7 @@ description: The Wilkinson power divider is a three-port device used for power d
 language: en-US
 businessId: wilkinson_power-divider
 keywords: Finite Difference Time Domain,FDTD,Power Divider,S parameter
-coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/wilkinson_power_divider_structure.png
+coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/wilkinson_power_divider_cover.png
 ---
 
 # Preface
@@ -26,7 +26,7 @@ $$\epsilon_e=\frac{\epsilon_r +1}{2}+\frac{\epsilon_r -1}{2}\frac{1}{\sqrt{1+12d
 
 Where $\epsilon_r$ is the relative permittivity of the substrate. Based on the above formulas and the characteristic impedance values of each TL, the width $w$ of each TL can be calculated, which are $4.9mm (Z_0=50\Omega)$ and $2.804mm (\sqrt{2}Z_0=70.7\Omega)$, respectively.
 
-The thickness of the TLs and the resistor is much smaller than the operating wavelength, so 2D structure can be used for modeling. The ring TL with an impedance of $\sqrt{2}Z_0$ can be formed from 2D polygon, with a circumference of $55.5mm$. The resistor is modeled using a 2D rectangle with lumped $<RLC>$ material, with the current direction along the $X$ axis and a resistance value of $R=100\Omega$.
+The thickness of the TLs and the resistor is much smaller than the operating wavelength, so 2D structure can be used for modeling. The ring TL with an impedance of $\sqrt{2}Z_0$ can be formed from 2D polygon, with a circumference of $55.5mm$. The resistor is modeled using a 2D rectangle with lumped *<RLC>* material, with the current direction along the $X$ axis and a resistance value of $R=100\Omega$.
 
 ## Source
 
@@ -42,22 +42,22 @@ To obtain all the S-parameter components of the device, multiple simulations are
 
 The $Y_{min}$ boundary of the solver uses the `PEC` boundary condition to simulate the ground plane of the device, while the remaining boundary conditions are all `PML`. When $Port 1$ is used as the input source, due to the symmetry of the source and the structure, we can use the `Symmetric` boundary condition at $X_{min}$ to reduce the simulation region to half, thereby reducing the simulation time, as shown in the figure below.
 
-![simulation](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/wilkinson_power_divider_simulation.png)
+![simulation](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/wilkinson_power_divider_simulation_nonuniform.png)
 
 # Simulation results
 ## Electric field distribution
 
 The figure below shows the electric field distribution of the device at a frequency of $1GHz$ during transmission and isolation simulations. When $Port 1$ is used as the source port, due to symmetry, the electric field intensities at $Port 2$ and $Port 3$ are identical. When $Port 2$ is used as the source port, the electric field intensity at $Port 3$ is low, demonstrating significant isolation between $Port 2$ and $Port 3$.
 
-![Transmission_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/wilkinson_power_divider_Transmission_E.png)
+![Transmission_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/wilkinson_power_divider_Transmission_E_beta4.2.5.png)
 
-![Isolation_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/wilkinson_power_divider_Isolation_E.png)
+![Isolation_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/wilkinson_power_divider_Isolation_E_beta4.2.5.png)
 
 ## S parameter
 
-The S-parameters of the Wilkinson power divider are shown in the figure below. Its center frequency is $0.966GHz$, which is less than 4% different from the design frequency of $1GHz$. At a frequency of $1GHz$, $S_{11}=-27dB$ and $S_{22}=-30dB$, indicating that the reflections from any input port are very small at the design frequency, which means good impedance matching between the ports. $S_{32}=-33dB$ shows that the power transmitted from $Port 2$ to $Port 3$ is very small, indicating good isolation between the output ports; $S_{31}=-3.05dB$, with less than 10% variation across the entire simulation frequency band, indicates that the power transmitted from the input port ($Port 1$) to $Port 3$ is approximately 50% across the entire band. Due to the symmetry of the device, the power transmitted from the input port to $Port 2$ is also 50%, demonstrating the equal power distribution and good bandwidth of the device.
+The S-parameters of the Wilkinson power divider are shown in the figure below. Its center frequency is $0.99GHz$, which is less than 1% different from the design frequency of $1GHz$. At a frequency of $1GHz$, $S_{11}=-37dB$ and $S_{22}=-33dB$, indicating that the reflections from any input port are very small at the design frequency, which means good impedance matching between the ports. $S_{32}=-29dB$ shows that the power transmitted from $Port 2$ to $Port 3$ is very small, indicating good isolation between the output ports; $S_{31}=-3dB$, with less than 10% variation across the entire simulation frequency band, indicates that the power transmitted from the input port ($Port 1$) to $Port 3$ is approximately 50% across the entire band. Due to the symmetry of the device, the power transmitted from the input port to $Port 2$ is also 50%, demonstrating the equal power distribution and good bandwidth of the device.
 
-![S_parameter](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/wilkinson_power_divider_S_parameter.png)
+![S_parameter](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/wilkinson_power_divider_S_parameter_beta4.2.5.png)
 
 # References
 [^1]:D. M. Pozar, Microwave Engineering, Fourth Edition. John Wiley & Sons (2012).

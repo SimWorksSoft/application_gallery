@@ -14,7 +14,7 @@ The Multi-mode Interference (MMI) coupler is composed of three parts: input wave
 ![design_without_taper](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_structures_design_without_taper.png)
 
 - self-imaging effect
-  The self-imaging effect is the theoretical basis of MMI. According to this theory, the length of the interference region of a 1xN symmetric MMI coupler is generally located at the position of the first N-fold image, which is calculated as follows:
+  The self-imaging effect is the theoretical basis of MMI. According to this theory, the length of the interference region of a 1 $\times$ N symmetric MMI coupler is generally located at the position of the first N-fold image, which is calculated as follows:
 
 $$L_{MMI}=\frac{3L_\pi}{4N}$$
 
@@ -26,19 +26,19 @@ The performance of the device is affected by the geometric parameters of the wav
 
 # Simulation settings
 
-This example builds a MMI coupler with 1x2 ports in a 3D FDTD simulation. To make the device as compact as possible, the shortest length of MMI is set at the two-fold self-image. By using the calculation formula and reference [^2], we obtained the parameters shown below. The device is illustrated in the following figure.
+This example builds a MMI coupler with 1 $\times$ 2 ports in a 3D FDTD simulation. To make the device as compact as possible, the shortest length of MMI is set at the two-fold self-image. By using the calculation formula and reference [^2], we obtained the parameters shown below. The device is illustrated in the following figure.
 
 ![structures](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_structures_mpps.png)
 
-|               Parameter                |     Symbol      |    Value    |
-| :------------------------------------: | :-------------: | :---------: |
-|             $MMI~~length$              |    $L_{MMI}$    |  $32\mu m$  |
-|              $MMI~~width$              |    $W_{MMI}$    |  $6\mu m$   |
-|             $MMI~~height$              |       $~$       | $0.22\mu m$ |
-|            $Taper~~length$             |   $L_{taper}$   |  $10\mu m$  |
-|             $Taper~~width$             |   $W_{taper}$   | $1.1\mu m$  |
-|           $Waveguide~~width$           | $W_{waveguide}$ | $0.4\mu m$  |
-| $Separations~~between~~output~~tapers$ |       $S$       | $3.14\mu m$ |
+|                 Parameter                 |     Symbol      |    Value     |
+| :---------------------------------------: | :-------------: | :----------: |
+|               $MMI~~length$               |    $L_{MMI}$    |  32 $\mu m$  |
+|               $MMI~~width$                |    $W_{MMI}$    |  6 $\mu m$   |
+|               $MMI~~height$               |       $~$       | 0.22 $\mu m$ |
+|              $Taper~~length$              |   $L_{taper}$   |  10 $\mu m$  |
+|              $Taper~~width$               |   $W_{taper}$   | 1.1 $\mu m$  |
+|            $Waveguide~~width$             | $W_{waveguide}$ | 0.4 $\mu m$  |
+| $Seperations$ $between$ $output$ $tapers$ |       $S$       | 3.14 $\mu m$ |
 
 In this example, this MMI coupler is not sensitive to the polarization, e.g., TE and TM modes. Here, the TE0 mode is selected as the port source and shown in below figure.
 
@@ -57,17 +57,17 @@ Following a successful simulation of a single project, Optimizations and Sweeps 
 
 ## Optimization of MMI length
 
-Using the theoretical value ($L_{MMI}$=33$\mu$m) as a reference, this example will utilize the Optimizations and Sweeps function to determine the best MMI length. The scanning range for the MMI length in this case is set to $29\mu m$~$34\mu m$. After running the `mmi_length` sweep in the appendix project, we observe that the transmittivity in port2 varies with the length of MMI. As shown in the figure, the optimal MMI length should be found between $31\mu m$ and $33\mu m$.
+Using the theoretical value ($L_{MMI}$= 33 $\mu m$) as a reference, this example will utilize the Optimizations and Sweeps function to determine the best MMI length. The scanning range for the MMI length in this case is set to 29 $\mu m$ ~ 34 $\mu m$. After running the `mmi_length` sweep in the appendix project, we observe that the transmittivity in port2 varies with the length of MMI. As shown in the figure, the optimal MMI length should be found between 31 $\mu m$ and 33 $\mu m$.
 
 ![mmi_length](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_lite_sweep_mmi_length_port2_T_beta337.png)
 
 Based on the above sweep results, the MMI length can be further optimized by using the `optimization` function. The default algorithm used for Optimization is the Particle Swarm algorithm (see reference [^3]). Please note whether you choose to maximize or minimize the objective function, that is, select `Maximize` or `Minimize` in `Type`. The meaning of other parameters is referred to [Optimizations and Sweeps](/localhost/knowledge-base/User-Manual_optimization-and-sweep).
 
-Set the optimization range for the MMI length from $31\mu m$ to $33\mu m$. Then, run the `mmi_length_optimization` in the project to obtain the results. Among the results, `best fom` represents the maximum transmittivity obtained, which is 0.464, `best parameters` represent the optimal MMI length obtained, which is $32.5\mu m$, and the meaning of other parameters is referred to [Optimizations and Sweeps](/localhost/knowledge-base/User-Manual_optimization-and-sweep).
+Set the optimization range for the MMI length from 31 $\mu m$ to 33 $\mu m$. Then, run the `mmi_length_optimization` in the project to obtain the results. Among the results, `best fom` represents the maximum transmittivity obtained, which is 0.464, `best parameters` represent the optimal MMI length obtained, which is 32.5 $\mu m$, and the meaning of other parameters is referred to [Optimizations and Sweeps](/localhost/knowledge-base/User-Manual_optimization-and-sweep).
 
 ## Optimization of Taper Width
 
-For the width of the wedge structure, on the one hand, increasing its width can improve the quality of self-imaging and thus reduce the device loss; on the other hand, since the device is very compact and the spacing between the two output waveguides is very small, the width of the taper structure should be as small as possible to prevent the coupling crosstalk between the output waveguides. In this example, a parameter sweep was conducted on the taper width between $0.5\mu m$ and $1.5\mu m$ to select the optimal solution. Running the `taper_width` parameter sweep in the appendix yields the results shown in the below figure. After considering the spacing between the two output waveguides, the user can choose the appropriate width of the taper structure according to the desired transmittivity requirements.
+For the width of the wedge structure, on the one hand, increasing its width can improve the quality of self-imaging and thus reduce the device loss; on the other hand, since the device is very compact and the spacing between the two output waveguides is very small, the width of the taper structure should be as small as possible to prevent the coupling crosstalk between the output waveguides. In this example, a parameter sweep was conducted on the taper width between 0.5 $\mu m$ and 1.5 $\mu m$ to select the optimal solution. Running the `taper_width` parameter sweep in the appendix yields the results shown in the below figure. After considering the spacing between the two output waveguides, the user can choose the appropriate width of the taper structure according to the desired transmittivity requirements.
 
 ![sweep_taper_width](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/lite_client_sweep_taper_width.png_release141.png)
 

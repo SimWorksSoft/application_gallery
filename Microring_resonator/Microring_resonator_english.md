@@ -1,82 +1,104 @@
 ---
 title: Silicon Based Double Straight Waveguide Microring Resonator
-description: In this case, the operation process and precautions are stressed by using FDTD solver to simulate microring resonance.
+description: Integrated photonics has become a key enabling technology in areas such as optical communications, sensing, and signal processing. Among various photonic devices, microring resonators are widely used in applications such as filtering, modulation, and nonlinear optics due to their compact footprint, high quality factor, and excellent wavelength-selective properties. In this case, we design and simulate a microring resonator with a center wavelength of 1.55 um and a free spectral range (FSR) of 3200 GHz.
 language: en-US
 businessId: silicon-based-double-straight-waveguide-microring-resonator
-keywords: Microring resonator,Resonant,Waveguide,Finite Difference Time Domain(FDTD),Silicon-On-Insulator(SOI)
+keywords: Ring resonator,Resonant,Waveguide,Finite Difference Time Domain(FDTD),Finite Difference Eigenmode(FDE),Silicon-On-Insulator(SOI)
 coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/ring_fdfp_data_e2_20240304131909A018.jpg
 ---
 
 # Preface
 
-In the silicon-based waveguide microring resonator, the special microring structure allows the light waves that meet the resonant conditions to interfere and superpose to generate resonance, which achieves the wavelength selection. Therefore, microring resonators are widely used in many fields. As shown in the figure, the typical waveguide-based resonator consists of two parallel straight waveguides and microrings between waveguides. In this case, the operation process and precautions are stressed by using FDTD solver to simulate microring resonance.
+Integrated photonics has become a key enabling technology in areas such as optical communications, sensing, and signal processing. Among various photonic devices, microring resonators are widely used in applications such as filtering, modulation, and nonlinear optics due to their compact footprint, high quality factor, and excellent wavelength-selective properties. To achieve the desired spectral response within the target wavelength range, precise parameter optimization and performance prediction are essential during the design stage.
 
-![orring3d.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/orring3d.png)
+In this case, we design and simulate a microring resonator with a center wavelength of $1.55 \mu m$ and a free spectral range (FSR) of $3200 GHz$.
+![RingResonator_structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/RingResonator_structure.png)
 
-# Simulation settings
+We first use the `FDE` solver to calculate $n_{eff}$ and $n_g$ and determine an appropriate microring radius. Then, with the radius fixed, a 2.5D `FDTD` simulation is performed to obtain the transmission spectrum and Q factor from the *input* port to the *drop* port. The results are compared with those from a 3D `FDTD` simulation to verify both the design accuracy and the reliability of the simulation method.
 
+
+# Simulation Settings
 ## Device introduction
+The model used in this case is shown above, and the waveguide is an SOI structure with dimensions of $0.4 \mu m \times 0.22 \mu m$. The widths of the double straight waveguides ($wg_{width}$) and the microring waveguide ($ring_{width}$) are identical, and the waveguide gap is set to $0.1 \mu m$.
 
-The main parameters of the double-straight waveguide microring resonator are microring radius, waveguide spacing, waveguide width and waveguide height. In this device, a SOI structure with cross section size $0.4 \mu m×0.22 \mu m$ is used, where the width of the double straight waveguide, $wg_{width}$, is equal to the width of the microring waveguide, $ring_{width}$, and the waveguide spacing, $gap$, is $0.1 \mu m$. If the phase change is exactly equal to an integer multiple of $2 \pi$ when light propagates in a circle in the microring, that is, when the coherence condition is satisfied, all the light waves coupled into the microring will interfere with each other and produce a resonance enhancement effect.
+The design goal is to achieve an FSR of $3200 GHz$ (corresponding to a wavelength spacing of $25.6 nm$) at the center wavelength of $1.55 \mu m$. To meet this requirement, the microring radius $R$ must satisfy both of the following equations:
 
-$$2 \pi R n_{eff,wg} = m \lambda  $$
+$$R=\frac{m \lambda}{2\pi n_{eff}},\space R=\frac{\lambda^2}{2\pi n_g FSR}$$
 
-According to the above formula, the radius $R$ of the microring that satisfies the resonance requirement can be solved. When the central wavelength of the input source is $1.55 \mu m$, the effective refractive index of the optical mode can be solved by the mode solver. Thus, for the SOI structure with $0.4 \mu m×0.22 \mu m$ cross section, the theoretically calculated radius $R$ of the microring is about $2.9 \mu m$ when $m = 25$.
+Here, $n_{eff}$ and $n_g$ are the effective index and group index of the guided mode at $1.55 \mu m$, respectively. The first equation arises from the resonance mode condition, ensuring phase coherence after one round trip in the ring. The second equation comes from the relationship between FSR and ring circumference, ensuring the resonance spacing meets the design target.
+
+![RingResonator_simulation](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/RingResonator_simulation.png)
 
 ## Solver settings
+Since silicon is a dispersive optical material, to ensure continuity of the material model over the frequency range, the `sampled material data sampling type` in the `FDE` solver should be set to use a polynomial material model fit.
 
-The FDTD solver is used in this simulation. FDTD is used to calculate the time signals in the time domain, and the Fourier transform can be used to obtain the results in the frequency domain. For such high-Q devices as microring resonators, a longer simulation time is required in order to obtain more accurate simulation results, which is set to 5 ps here. To improve the simulation efficiency and maintain the calculation accuracy, the mesh type is set to the automatic non-uniform mesh, the accuracy level is set to 4, and the mesh refinement method is selected as the Conformal variant VP-EP. In addition, in order to solve mode of the port accurately, a uniform refined mesh is overridden between the coupling region of the waveguide and the ring.
+![FDE_setting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/RingResonator_FDE_setting.png)
 
-Note: This software supports to build and edit simulation models through scripts. See [script function](/localhost/knowledge-base/Script-Commands_script-commands-overview) for more information. Attachments contain script files to complete the device building and simulation setup.
+The ring resonator is a high Q device, and in order to get more accurate simulation results, a longer simulation time is needed, in this case, the `FDTD` simulation time needs to be set to 5 ps. For the 2.5D `FDTD` simulation, because the source bandwidth is $0.1 \mu m$ and waveguide dispersion must be considered, the `Broad bandwidth` option should be enabled in the `2.5D setting` tab. The `slab position` should be set to the location of the waveguide, as described in the 2.5D Solver documentation.
 
-![ring_vpep_mesh.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/ring_vpep_mesh.png)
-
-## Source
-
-In this case, select "port" to input the mode source in the waveguide. For the double straight waveguide microring resonator, four corresponding ports are added to record the input and output data for further calculation of S-parameters, etc. Note: it is necessary to select a port as the source in the port group and set the source band, which is used to solve the injection mode and import the mode source.
-
-![ring_port_1.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/ring_port_1.png)
+![2.5D_setting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/RingResonator_25D_setting.png)
 
 # Simulation results
+## Effective Index and Group Index
+Open the attached *RingResonator_FDE.mpps* project and run the *neff_ng.msf* script to sets up the `FDE` solver to perform mode solving and frequency sweeping to get the effective index and group index at $1.55 \mu m$.
 
-Once all the settings are complete, you can start running the simulation. The simulation control platform allows users to save the real-time transmission field, which is convenient for users to observe the resonance phenomenon, as shown in the following figure.
+![neff](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/RingResonator_neff.png)
+![ng](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/RingResonator_ng.png)
 
-![ring_data_t.gif](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/transient_fields_ring.gif)
+The results show that $n_{eff}=2.1155$ and $n_g = 4.865$. When $m=27$, the radii calculated from the two formulas are closest, corresponding to $R \approx 3.15 \mu m$.
 
-After the simulation, Mode Port and Monitor automatically save the observed information. The corresponding data visualization interface can obtain all result data. For more information, see [data visualization](/localhost/knowledge-base/User-Manual_data-visualizing) function introduction.
+## Transmission Spectrum
+Before performing both 2.5D and 3D simulations, the *RingResonator_structure.msf* script is used to adjust parameters such as the ring radius and port positions. The transmission spectrum obtained from the two simulation methods are presented below.
 
-As shown in the below figure, T in the data list of each port shows the relationship between wavelength and transmission. Three resonance peaks around the $1.55 \mu m$ can be clearly seen.
+First, run the *RingResonator_2.5d.mpps* project. Afterward, use the *RingResonator.msf* script to obtain the transmission spectrum at the four ports:
 
-![ring_fdfp_data_t.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/ring_fdfp_data_t4.png)
+![RingResonator_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/RingResonator_T.png)
 
-According to the resonance peak at the output port, the data of FDFP monitor ZX were viewed. The corresponding electric field magnitude at a wavelength of $1.55 \mu m$ is shown on the right of the following figure. It is clear that the field magnitude is significantly enhanced relative to the non-resonant wavelength of $1.54 \mu m$ (See left below).
+The results show three distinct resonance peaks, with the central wavelength at $1.545 \mu m$, differing from the design value by less than 1%. This confirms the effectiveness of 2.5D FDTD for rapid modeling and analysis.
 
-![ring_fdfp_data_e.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/ring_fdfp_data_e2.png)
+Subsequently, the *RingResonator_3d.mpps* project is executed, and the transmission spectrum obtained is shown below:
 
-Note: After the simulation, this software supports viewing the results and post-processing data by scripts. The attachment contains the data visualization script for this case.
+![RingResonator_T_3d](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/RingResonator_T_3d.png)
 
-The analysis group "high Q analysis" that can analyze Q values of the three resonance peaks in the microring resonator has been added in the attachment project. After the simulation is completed, the Q values of the three resonance peaks can be obtained, and the results are shown as follows.
+It can be seen that the 3D simulation yields a central wavelength of $1.551 \mu m$, which is closer to the design value than the 2.5D result, demonstrating the superior accuracy of 3D FDTD. The subsequent result analyses are therefore based on 3D simulations.
+
+## Electric field distribution at resonant wavelengths
+According to the resonance peak at the output port, the data of FDFP monitor ZX were viewed. The electric field intensity at the resonance peaks is shown in the right figure. Clearly, compared with the non-resonant wavelength of $1.54 \mu m$ (left figure), the field intensity is significantly enhanced.
+
+![ring_fdfp_data_e_3d.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/ring_fdfp_data_e2_3d_beta4.2.3.png)
+
+## Q factor
+The *High Q analysis group* in the project computes the Q factors for the three resonance peaks:
 
 ```msf
+[High Q analysis::analysis script result] 
 val =
-Resonance 1:
+Resonance 1:  
 val =
-    frequency = 196.995THz, or 1521.83 nm
+    frequency = 193.219THz, or 1551.57 nm  
 val =
-    Q = 3608.12
+    Q = 2471 +/- 0.0192705  
 val =
-Resonance 2:
+Resonance 2:  
 val =
-    frequency = 189.921THz, or 1578.51 nm
+    frequency = 196.43THz, or 1526.21 nm  
 val =
-    Q = 1994.18
+    Q = 3257.29 +/- 0.000534521  
 val =
-Resonance 3:
+Resonance 3:  
 val =
-    frequency = 193.43THz, or 1549.88 nm
+    frequency = 190.071THz, or 1577.27 nm  
 val =
-    Q = 2672.63
+    Q = 1815.94 +/- 0.127365 
 ```
+
+## Comparison with theoretical Results
+
+Using the attached *RingResonator.msf* script, the theoretical spectrum of the $drop$ port at a center wavelength of $1.55\mu m$ and $FSR=3200GHz$ was calculated and compared with the simulation results, as shown below.
+
+![RingResonator_resultcompare](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/RingResonator_resultcompare.png)
+
+The simulated FSR agrees well with the theoretical value. The overall transmission from the 3D `FDTD` simulation is lower, mainly because more loss factors are present in the full 3D model. The precise position of the resonance peak is highly sensitive to the effective optical length of the microring resonator. Although both simulation methods use the same structure, the 2.5D simulation requires approximating 3D materials as a 2D model. This approximation introduces a certain degree of error, leading to slight differences in effective optical length compared with the 3D simulation, and consequently a small shift in the resonance peak position.
 
 # References
 

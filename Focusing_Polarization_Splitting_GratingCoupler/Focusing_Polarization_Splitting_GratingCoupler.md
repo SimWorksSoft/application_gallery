@@ -41,7 +41,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/polariz
 |       $Angle$ $&nbsp$ $Phi$       |   $45^o$    |
 | $Linearly$ $&nbsp$ $Polarization$ |   $90^o$    |
 
-![source](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/polarization_slitting_grating_coupler_source.png)
+![source](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/polarization_slitting_grating_coupler_source_1.png)
 
 # 仿真结果
 
