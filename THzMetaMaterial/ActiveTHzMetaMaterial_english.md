@@ -15,7 +15,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Active_
 
 ## Device introduction
 
-The THz metamaterial used in this case consists of a gallium arsenide (GaAs) substrate and a gold (Au) layer on its surface. Its structure is shown in the figure below. The thickness of gold used in the reference is $0.2 \mu m$, which is much smaller than the wavelength used in the simulation (130$\mu m$ - 1200$\mu m$), so `2D Structure` can be used in this case to build the gold layer. Since the simulation structure and the source are symmetrical in the X direction, we use `Symmetric` boundary conditions in the $X_{min}$ and $X_{max}$ directions.
+The THz metamaterial used in this case consists of a gallium arsenide (GaAs) substrate and a gold (Au) layer on its surface. Its structure is shown in the figure below. The thickness of gold used in the reference is $0.2 \mu m$, which is much smaller than the wavelength used in the simulation ( $130\mu m - 1200\mu m$), so `2D Structure` can be used in this case to build the gold layer. Since the simulation structure and the source are symmetrical in the X direction, we use `Symmetric` boundary conditions in the $X_{min}$ and $X_{max}$ directions.
 
 ![Active_THz_Metamaterial_structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_structure.png)
 |Parameters|A|D|G|W|
@@ -42,7 +42,9 @@ The attached script file can be used to plot the electric field distribution and
 
 The results are plotted in the figure below. At a resonance frequency of 0.66THz, the electric field is highly concentrated at the split gaps, and there is no significant surface current on the metal lines connecting the metasurface elements.
 
-![Active_THz_Metamaterial_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_E.png)![Active_THz_Metamaterial_K](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_K_new.png)
+![Active_THz_Metamaterial_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_E.png)
+
+![Active_THz_Metamaterial_K](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_K_new.png)
 
 # References
 

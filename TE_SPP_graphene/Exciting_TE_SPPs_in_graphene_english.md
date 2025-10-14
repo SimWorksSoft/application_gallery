@@ -10,6 +10,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/surface
 # Preface
 
 Graphene, with its excellent electrical, thermal and mechanical properties, has attracted extensive attention from scientific researchers since its discovery. The chemical potential of graphene can be regulated by methods such as voltage or chemical doping. This property makes graphene highly versatile in the field of material-light interactions, particularly in relation to surface plasmon polaritons (SPPs). Surface plasmon polaritons are electromagnetic surface waves in which the field energy is predominantly concentrated on the surface of a metal and decays exponentially in the direction perpendicular to the interface. By exciting surface plasmons, graphene significantly enhances its ability to interact with light.
+
 Based on the work outlined in the reference [^1], this case aims to study the enhanced interaction between graphene and light when graphene satisfies the conditions for surface plasmon resonance.
 
 # Simulation Settings

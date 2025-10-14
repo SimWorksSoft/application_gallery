@@ -10,6 +10,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/PC_Brag
 # Preface
 
 Bragg fiber is a type of air-core fiber that has received significant attention from researchers. It can allow light to propagate in the air core, which avoids problems caused by intrinsic material limitations such as absorption, dispersion, nonlinearity and low damage threshold. The FDE solver in this software can accurately calculate modes for complex structures, including photonic crystal(PC) Bragg fibers. In this example, we use the FDE solver to calculate the modes of the PC Bragg fiber described by Vienne et al [^1] and further compare the results with those from Uranus et al [^2].
+
 ![PC_BraggFiber_structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_BraggFiber_structure.png)
 
 # Simulation settings
@@ -39,7 +40,11 @@ As both the structure and the electromagnetic field are symmetric, the `Symmetri
 ## Eigenmode
 
 After the simulation, the target mode can be identified in the `Modal List` based on the electromagnetic field distribution. Among them, `Mode#9` is the $TE_{01}$ mode and `Mode#10` is the $HE_{21}$ mode, whose electric field distributions are shown below:
-![PC_BraggFiber_TE_200](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_BraggFiber_TE_200.png)![PC_BraggFiber_HE_200](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_BraggFiber_HE_200_release1.3.0.png)
+
+![PC_BraggFiber_TE_200](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_BraggFiber_TE_200.png)
+
+![PC_BraggFiber_HE_200](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_BraggFiber_HE_200_release1.3.0.png)
+
 The following table shows the effective index and loss for the $TE_{01}$ and $HE_{21}$ modes, in comparison with the corresponding results from Uranus et al.
 |-|neff TE01|neff HE21|Loss TE01|Loss HE21|
 |:-----:|:-----:|:-----:|:-----:|:-----:|
@@ -51,13 +56,19 @@ The effective index calculated by this software is very close to the results fro
 ## Convergence test
 
 This type of structure is very sensitive to small changes in the numerical mesh (as well as real manufacturing imperfections), so a convergence testing is necessary. The number of mesh cells was refined from 200x200 to 800x800. The effective index of the $TE_{01}$ mode and the $HE_{21}$ mode at different numbers of mesh is plotted in the following figure.
+
 ![PC_BraggFiber_neff](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_BraggFiber_neff.png)
+
 The effective index of the corresponding modes gradually converges as the number of mesh cells increases. At 800x800 cells, the effective index of the $TE_{01}$ mode is 0.997908, and that of the $HE_{21}$ mode is 0.997851. The results of the effective index approach to the results of Uranus et al.
 
 ## Frequency analysis
 
 Dispersion in fibers is the distortion of a signal that occurs when different frequency components propagate at different speeds. The effective index and dispersion of the $TE_{01}$ mode were obtained by sweeping the frequency range from 240 THz to 280 THz. The results are shown below:
-![PC_BraggFiber_neff_frequency_sweep](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_BraggFiber_neff_frequency_sweep.png)![PC_BraggFiber_dispersion_frequency_sweep.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_BraggFiber_dispersion_frequency_sweep.png)
+
+![PC_BraggFiber_neff_frequency_sweep](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_BraggFiber_neff_frequency_sweep.png)
+
+![PC_BraggFiber_dispersion_frequency_sweep.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/PC_BraggFiber_dispersion_frequency_sweep.png)
+
 As the wavelength increases, the effective index decreases, which indicates the confinement for longer wavelength is weaker. From the above figure, we can see that this PC Bragg fiber can exhibit zero or negative dispersion under certain wavelength bands. Therefore, this air-core fiber with extremely low nonlinearity and high damage threshold enables high-speed, large-capacity and long-distance communication.
 
 # References

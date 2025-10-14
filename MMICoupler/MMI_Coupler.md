@@ -15,8 +15,10 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/MMI_FDT
 
 - 自镜像效应
   自镜像效应是多模干涉器的理论基础。根据该理论，1 $\times$ N 的对称型多模干涉耦合器的干涉区域长度一般就是首个 N 重像的位置，其计算公式如下：
+
   $$L_{MMI}=\frac{3L_\pi}{4N}$$
-  其中$L_\pi=\pi/(\beta_0-\beta_1)\approx 4n_rW^2/(3\lambda)$，其中$\beta_0，\beta_1$分别为基模和一阶本征模的传播常数，$n_r$是波导的折射率，$W$是 MMI 波导的宽度。具体细节请参考文献[^1]。
+
+  其中 $L_\pi=\pi/(\beta_0-\beta_1)\approx 4n_rW^2/(3\lambda)$，其中 $\beta_0，\beta_1$ 分别为基模和一阶本征模的传播常数， $n_r$ 是波导的折射率，$W$ 是 MMI 波导的宽度。具体细节请参考文献[^1]。
 
 在本案例当中，在输入/输出波导连接 MMI 区域的之间平滑地接入一段楔形波导（taper waveguide），可以大大减小纵向多模对成像均匀性的影响，同时降低在单模波导与 MMI 区域连接处产生反射而引起的附加损耗。此时，波导、楔形结构及 MMI 区的尺寸参数均影响着器件的性能，设计过程中往往不能确定每个结构的尺寸，并且很难保证每一部分的最佳尺寸在整合之后仍是最优解。本案例使用优化与扫描功能对模型参数进行扫描分析，从而进一步优化参数和模型。
 
@@ -45,6 +47,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/MMI_FDT
 打开附件工程文件，直接运行，在`Frequency-Domain Field and Power`监视器的结果中，可以观察到入射光束在多模干涉区经过自镜像效应后，能量被均分到两个输出端口当中。此时两个输出端口中，透射率（port2 和 port3）完全相同。
 
 ![fdfp](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_FDFP_monitor_E.png)
+
 ![T_port2_and3](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_port2_and3_T_real.png)
 
 # 参数分析
@@ -53,16 +56,16 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/MMI_FDT
 
 ## 多模干涉区的长度优化
 
-以理论公式计算得到的多模干涉区长度作为参考（$L_{MMI}$=33 $\mu m$），本案例将会通过参数的优化与扫描功能来寻找最佳的多模干涉区长度。首先设置多模干涉区长度的扫描区间为 29 $\mu m$~34 $\mu m$，打开附件当中的工程，运行`mmi_length`的参数扫描，即可得到 port2 中的透射率随其变化的趋势，如下图所示，可以观察到最佳透射率应该在 31 $\mu m$到 33 $\mu m$之间。
+以理论公式计算得到的多模干涉区长度作为参考（ $L_{MMI}=33 \mu m$ ），本案例将会通过参数的优化与扫描功能来寻找最佳的多模干涉区长度。首先设置多模干涉区长度的扫描区间为 $29 \mu m - 34 \mu m$，打开附件当中的工程，运行`mmi_length`的参数扫描，即可得到 port2 中的透射率随其变化的趋势，如下图所示，可以观察到最佳透射率应该在 $31 \mu m$到 $33 \mu m$之间。
 
 ![mmi_length](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_lite_sweep_mmi_length_port2_T_beta337.png)
 
 针对上述参数扫描结果，可以继续使用`optimization`对该参数进一步优化。优化所使用的默认算法为粒子群（Particle Swarm）算法 (见参考文献[^3]) ，请注意选择进行目标函数的最大化还是最小化，即：Type 中选择`Maximize`还是`Minimize`，其它参数的意义具体参考[Optimizations and Sweeps](/localhost/knowledge-base/User-Manual_optimization-and-sweep)。
-设置多模干涉区长度优化区间为 31 $\mu m$~33 $\mu m$，打开附件当中的工程，运行`mmi_length_optimization`优化，`best fom`表示优化得到的最大透射率，为 0.464，`best parameters`表示优化得到最佳多模干涉区长度，为 32.5 $\mu m$。其它参数意义具体参考[Optimizations and Sweeps](/localhost/knowledge-base/User-Manual_optimization-and-sweep)。
+设置多模干涉区长度优化区间为 $31 \mu m - 33 \mu m$，打开附件当中的工程，运行`mmi_length_optimization`优化，`best fom`表示优化得到的最大透射率，为 $0.464$，`best parameters`表示优化得到最佳多模干涉区长度，为 $32.5 \mu m$。其它参数意义具体参考[Optimizations and Sweeps](/localhost/knowledge-base/User-Manual_optimization-and-sweep)。
 
 ## 楔形结构的参数优化
 
-对于楔形结构的宽度，一方面增加其宽度，可以提高自成像的质量，从而降低器件损耗；另一方面，由于器件十分紧凑，两个输出波导之间间隔很小，为了防止输出波导之间的耦合串扰，楔形结构的宽度应该尽量小。本案例对其进行参数扫描，以便选择出最优解，扫描范围为 0.5 $\mu m$~1.5 $\mu m$。打开附件工程，运行`taper_width`参数扫描，其结果如下图所示。在考虑两个输出波导之间的间距后，用户可以根据所需要的透射率要求，自行选择合适的楔形结构的宽度。
+对于楔形结构的宽度，一方面增加其宽度，可以提高自成像的质量，从而降低器件损耗；另一方面，由于器件十分紧凑，两个输出波导之间间隔很小，为了防止输出波导之间的耦合串扰，楔形结构的宽度应该尽量小。本案例对其进行参数扫描，以便选择出最优解，扫描范围为 $0.5 \mu m - 1.5 \mu m$。打开附件工程，运行`taper_width`参数扫描，其结果如下图所示。在考虑两个输出波导之间的间距后，用户可以根据所需要的透射率要求，自行选择合适的楔形结构的宽度。
 
 ![sweep_taper_width](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/lite_client_sweep_taper_width.png_release141.png)
 

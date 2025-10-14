@@ -20,6 +20,7 @@ This case demonstrates how to use the grating projection functions in an FDTD si
 ## Device introduction
 
 In this case study, the diffraction grating consists of a 2D array of semi-ellipsoidal particles placed on the top surface of a substrate with a refractive index of $n=2$, as illustrated below. A broadband plane wave is normally incident from within the substrate onto the surface grating, generating multiple diffraction orders in both the reflection and transmission regions. `Bloch` boundary conditions are applied along the $X$, $Y$ directions, allowing a single unit cell to represent an infinitely periodic grating in the simulation. To ensure accurate grating projection, the monitor's span in the $X$, $Y$ directions must extend beyond the boundaries of the FDTD simulation region.
+
 ![Structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Diffraction_grating_Structure.png)
 
 # Simulation results
@@ -42,7 +43,7 @@ The figure below shows how the power fraction in the (0,0) diffraction order var
 
 ## Diffraction angle for a specific diffraction order
 
-For a grating structure with a fixed period and incident angle, except for the (0,0) diffraction order, the diffraction angles of other orders are mainly determined by the wavelength. The figure below shows the variation trend of the diffraction angle of the transmitted (0,1) diffraction order with wavelength. At a wavelength of 0.85 $\mu m$, this order propagates at an angle of approximately 70$\degree$. As the wavelength increases, $\theta$ gradually increases, indicating that the propagation direction of this order gradually approaches parallel to the grating period direction. When the wavelength exceeds 0.9 $\mu m$, $\theta$ reaches 90$\degree$, and this diffraction order transitions into a non-propagating mode and disappears.
+For a grating structure with a fixed period and incident angle, except for the (0,0) diffraction order, the diffraction angles of other orders are mainly determined by the wavelength. The figure below shows the variation trend of the diffraction angle of the transmitted (0,1) diffraction order with wavelength. At a wavelength of 0.85 $\mu m$, this order propagates at an angle of approximately 70 $\degree$. As the wavelength increases, $\theta$ gradually increases, indicating that the propagation direction of this order gradually approaches parallel to the grating period direction. When the wavelength exceeds 0.9 $\mu m$, $\theta$ reaches 90 $\degree$, and this diffraction order transitions into a non-propagating mode and disappears.
 
 ![Diffraction_angle](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Diffraction_grating_Diffraction_angle.png)
 

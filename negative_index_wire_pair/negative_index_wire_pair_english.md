@@ -26,6 +26,7 @@ Since a symmetric periodic structure is used, a combination of symmetric/anti-sy
 By running the attached script `negative_index_wire_pair.msf` after the simulation process is completed, the transmission and reflection properties of the structure are obtained. These simulation results closely resemble those reported in the reference [^1].
 
 ![transmission](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Negative_index_transmission.png)
+
 ![reflection](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Negative_index_reflection.png)
 
 # References

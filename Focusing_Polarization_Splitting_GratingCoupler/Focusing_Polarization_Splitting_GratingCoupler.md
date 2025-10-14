@@ -18,15 +18,15 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/polariz
 
 ## 模型简介
 
-本案例使用 3D FDTD 仿真，构建仿真模型如下图所示。在器件与波导之间增加扇形结构可以有效减少耦合损耗。此时整个光栅耦合器放置在 SOI 平台上，SOI 为三层结构，最底层为$Si$，中间层为$SiO_2$，上层放置$Si$光波导器件。本案例当中的光栅耦合器为$Si$衬底上刻蚀的一个个空气孔，其圆孔坐标即为两个一维聚焦光栅线的交点，其相关参数见参考文献[^1]，设置如下
+本案例使用 3D FDTD 仿真，构建仿真模型如下图所示。在器件与波导之间增加扇形结构可以有效减少耦合损耗。此时整个光栅耦合器放置在 SOI 平台上，SOI 为三层结构，最底层为 $Si$，中间层为 $SiO_2$，上层放置 $Si$ 光波导器件。本案例当中的光栅耦合器为 $Si$ 衬底上刻蚀的一个个空气孔，其圆孔坐标即为两个一维聚焦光栅线的交点，其相关参数见参考文献[^1]，设置如下
 
-|           参数名称           |      尺寸      |
-| :--------------------------: | :------------: |
-| $Waveguide$ $&nbsp$ $Length$ |   $15 \mu m$   |
-| $Waveguide$ $&nbsp$ $Depth$  |  $0.22 \mu m$  |
-|    $Hole$ $&nbsp$ $Depth$    |  $0.07 \mu m$  |
-|   $Hole$ $&nbsp$ $Radius$    | $0.1825 \mu m$ |
-|             $L$              |  $25.5\mu m$   |
+|     参数名称     |      尺寸      |
+| :--------------: | :------------: |
+| Waveguide Length |   $15 \mu m$   |
+| Waveguide Depth  |  $0.22 \mu m$  |
+|    Hole Depth    |  $0.07 \mu m$  |
+|   Hole Radius    | $0.1825 \mu m$ |
+|        L         |  $25.5\mu m$   |
 
 ![structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/polarization_slitting_grating_coupler_structure.png)
 
@@ -34,18 +34,18 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/polariz
 
 本案例当中使用高斯光源来模拟光纤当中的基模，为避免反射，将光源倾斜，此时高斯光源的束腰半径以及倾斜角等设置如下，其光源电场如下图所示
 
-|             参数名称              |    尺寸     |
-| :-------------------------------: | :---------: |
-|      $Waist$ $&nbsp$ $Width$      | $4.6 \mu m$ |
-|      $Angle$ $&nbsp$ $Theta$      |   $-10^o$   |
-|       $Angle$ $&nbsp$ $Phi$       |   $45^o$    |
-| $Linearly$ $&nbsp$ $Polarization$ |   $90^o$    |
+|       参数名称        |    尺寸     |
+| :-------------------: | :---------: |
+|      Waist Width      | $4.6 \mu m$ |
+|      Angle Theta      |   $-10^o$   |
+|       Angle Phi       |   $45^o$    |
+| Linearly Polarization |   $90^o$    |
 
 ![source](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/polarization_slitting_grating_coupler_source_1.png)
 
 # 仿真结果
 
-打开附件工程运行结束后，在`FDTD monitor`当中，在 1.5$\mu m$波段下可以观察到光被均分到两个输出端口当中。
+打开附件工程运行结束后，在`FDTD monitor`当中，在 1.5 $\mu m$ 波段下可以观察到光被均分到两个输出端口当中。
 
 ![result](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/polarization_slitting_grating_coupler_result.png)
 
@@ -58,6 +58,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/polariz
 运行参数扫描，在结果中可以观察到两个端口的透射率随光源线偏振角变化的趋势。随着线偏振角度从 45 度旋转到 135 度时，光也从一个输出端口转移到另一个输出端口。
 
 ![T1_sweep](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/polarization_slitting_grating_coupler_T1_sweep.png)
+
 ![T2_sweep](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/polarization_slitting_grating_coupler_T2_sweep.png)
 
 # 参考文献

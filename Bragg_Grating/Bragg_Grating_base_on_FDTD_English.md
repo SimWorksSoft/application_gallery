@@ -52,6 +52,7 @@ In this example, the `bandstructure` analysis group calculates the spectrum of B
 It is worth noting that the width of the resonance peaks in the spectrum is closely related to the calculation time. As the calculation time increases, the resonance becomes stronger and its peak becomes sharper. For gratings with shallow sidewall corrugation, additional calculation time is required to distinguish different resonance peaks in the spectrum. The initial time is set to $1.25ps$ in this example. Gradually increasing the computation time reduces the width of the resonance peaks, as shown in the following figures, where the computation time is $2.5ps$ for the above figure and $3.75ps$ for the below figure.
 
 ![bragg_grating_frequencypick_time_2500](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/bragg_grating_lambdapeak_time_2500fs.png)
+
 ![bragg_grating_frequencypick_time_3750](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/bragg_grating_lambdapeak_time_3750fs.png)
 
 # Parameter analyses

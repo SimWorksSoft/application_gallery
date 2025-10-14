@@ -15,7 +15,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/square-
 
 # 仿真设置
 
-本案例使用 FDTD 分析由均匀介质圆柱周期排列组成的正方晶格光子晶体的能带结构。如图所示，半径为$r$的均匀介质圆柱体，以晶格间距$a$在空气中沿着 z 和 x 轴周期性排列，形成 2D 正方晶格光子晶体。2D 正方晶格结构在 zx 平面内周期性变化，结构单元在 y 轴向无限延伸，所以在本案例中使用 2D FDTD 建模仿真，将仿真区域设置为 2D 平面进行计算。对于这种周期结构，在 FDTD 中使用周期性边界条件，此仿真只需要其中一个晶格结构单元，如下图中虚线框所示。
+本案例使用 FDTD 分析由均匀介质圆柱周期排列组成的正方晶格光子晶体的能带结构。如图所示，半径为 $r$ 的均匀介质圆柱体，以晶格间距 $a$ 在空气中沿着 z 和 x 轴周期性排列，形成 2D 正方晶格光子晶体。2D 正方晶格结构在 zx 平面内周期性变化，结构单元在 y 轴向无限延伸，所以在本案例中使用 2D FDTD 建模仿真，将仿真区域设置为 2D 平面进行计算。对于这种周期结构，在 FDTD 中使用周期性边界条件，此仿真只需要其中一个晶格结构单元，如下图中虚线框所示。
 
 ![square2D_lattice.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/square2D_lattice.png)
 
@@ -71,7 +71,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/square-
 
 本案例中，需针对不同的 Bloch 波矢（bloch kz，bloch kx）进行参数扫描。能带结构图中的波矢为归一化波矢，而在 FDTD 求解器计算时使用 Bloch 波矢，所以需要进行转换。归一化波矢范围由布里渊区特殊点坐标值决定，并且 $k_{normalized}=k_{Bloch} * a/2/\pi$，所以由归一化波矢范围可计算对应的 Bloch 波矢参数扫描范围。本案例中需要计算每个波矢下的频谱，以获得每个波矢下可以稳定存在的模式，所以选择分析组 bandstructure 的结果 Spectrum 作为本次扫描的输出对象。
 
-所有的参数扫描运行完成后，打开本光子晶体案例对应的能带结构计算脚本文件（square2D.msf）并运行。软件在脚本运行完成后自动显示计算的结果，如下图中的 Figure 1 和 Figure 2 所示。Figure 1 由波矢、频率和对应频谱数据绘制而成，图中的横坐标代表从布里渊区中心 Γ 到 X，再到 M，最后回到中心 Γ 的波矢，轴上的 30 个坐标点为按参数扫描顺序排列的归一化波矢数值点，纵坐标代表频率值，图中 colorbar 颜色代表每个波矢下频谱中各频率的信号幅度大小。从 Figure 1 中的颜色分布大概可以看出光子晶体的能带结构。最终的能带结构图如 Figure 2 所示，由波矢及其对应的归一化共振频率（$f_{normalized}=f * a/c$）数据绘制而成，图中横坐标代表归一化波矢，纵坐标代表归一化频率，而图中的点代表对应波矢下可以稳定存在的模式。
+所有的参数扫描运行完成后，打开本光子晶体案例对应的能带结构计算脚本文件（square2D.msf）并运行。软件在脚本运行完成后自动显示计算的结果，如下图中的 Figure 1 和 Figure 2 所示。Figure 1 由波矢、频率和对应频谱数据绘制而成，图中的横坐标代表从布里渊区中心 Γ 到 X，再到 M，最后回到中心 Γ 的波矢，轴上的 30 个坐标点为按参数扫描顺序排列的归一化波矢数值点，纵坐标代表频率值，图中 colorbar 颜色代表每个波矢下频谱中各频率的信号幅度大小。从 Figure 1 中的颜色分布大概可以看出光子晶体的能带结构。最终的能带结构图如 Figure 2 所示，由波矢及其对应的归一化共振频率（ $f_{normalized}=f * a/c$ ）数据绘制而成，图中横坐标代表归一化波矢，纵坐标代表归一化频率，而图中的点代表对应波矢下可以稳定存在的模式。
 
 ![TM_figure1_2.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/TM_figure1_2.png)
 

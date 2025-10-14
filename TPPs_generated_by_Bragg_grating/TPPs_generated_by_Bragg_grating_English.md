@@ -17,23 +17,23 @@ As shown in the below figure, the bragg grating with defect layer is simulated i
 
 ![structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/TPP_on_FDTD_structure_new.png)
 
-|          name           | symbol |   size   |
-| :---------------------: | :----: | :------: |
-|   $Ag$$&nbsp$$width$    | $d_a$  | $30 nm$  |
-|  $SiO_2$$&nbsp$$width$  | $d_A$  | $275 nm$ |
-| $Si_3N_4$$&nbsp$$width$ | $d_B$  | $160 nm$ |
-| $Al_2O_3$$&nbsp$$width$ |  $ds$  | $258 nm$ |
-|           $N$           |  $N$   |   $24$   |
+|         name          | symbol |   size   |
+| :-------------------: | :----: | :------: |
+|   $Ag\space width$    | $d_a$  | $30 nm$  |
+|  $SiO_2\space width$  | $d_A$  | $275 nm$ |
+| $Si_3N_4\space width$ | $d_B$  | $160 nm$ |
+| $Al_2O_3\space width$ |  $ds$  | $258 nm$ |
+|          $N$          |  $N$   |   $24$   |
 
 ## Material
 
 In this case, $Ag$ as a _drude_ material is set as follows and its fitting result is shown in the figure below. The $SiO_2$ and $Si_3N_4$ in the Bragg grating are dielectric materials with relative refractive indices of 1.45 and 2.2 [^1], respectively. And the refractive index of the defective layer $Al_2O_3$ is 1.76.
 
-|                                     name                                      |    symbol     |         size         |
-| :---------------------------------------------------------------------------: | :-----------: | :------------------: |
-|                                $Permittivity$                                 | $\varepsilon$ |        $3.7$         |
-|                    $Drude$$&nbsp$$pole$$&nbsp$$frequency$                     |  $\omega_p$   | $1.38253338e16rad/s$ |
-| $Inverse$$&nbsp$$of$$&nbsp$$the$$&nbsp$$pole$$&nbsp$$relaxation$$&nbsp$$time$ |  $\gamma_p$   | $2.73468141e13rad/s$ |
+|                name                 |    symbol     |         size         |
+| :---------------------------------: | :-----------: | :------------------: |
+|            Permittivity             | $\varepsilon$ |        $3.7$         |
+|        Drude pole frequency         |  $\omega_p$   | $1.38253338e16rad/s$ |
+| Inverse of the pole relaxation time |  $\gamma_p$   | $2.73468141e13rad/s$ |
 
 ![materials_Ag_drude](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/TPP_on_FDTD_materials_Ag_drude.png)
 
@@ -43,14 +43,14 @@ When a layer of $Al_2O_3$ is introduced into the Bragg grating as a defect, an u
 
 ![T_with_defect](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/TPP_on_FDTD_T_with_defect.png)
 
-Now the strong resonance at $Al_2O_3$ layer can be observed from the below electric field distribution at 1.5556$\mu m$.
+Now the strong resonance at $Al_2O_3$ layer can be observed from the below electric field distribution at $1.5556\mu m$.
 
 ![T_with_defect_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/TPP_on_FDTD_T_with_defect_E.png)
 
 As a comparison, the reflection spectrum without the $Al_2O_3$ defect is shown in the following figure.
 ![T_with_no_defect](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/TPP_on_FDTD_T_with_no_defect.png)
 
-The electric field distribution at 1.5556$\mu m$ clearly presents that the light is completely absorbed by the Bragg grating multilayers.
+The electric field distribution at $1.5556\mu m$ clearly presents that the light is completely absorbed by the Bragg grating multilayers.
 ![T_no_defect_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/TPP_on_FDTD_T_no_defect_E.png)
 
 # Parameter analyses

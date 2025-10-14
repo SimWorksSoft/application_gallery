@@ -40,6 +40,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/wavegui
 微腔结构的水平和垂直截面位置的 FDFP monitor 记录了不同频率的场强分布情况，在此对比共振频率和无共振频率下的场强分布。从下图可以明显看出，在布拉格微腔位置的共振电场约有六倍强度的增强，另一张图片中展示出，无共振现象发生时，大部分辐射被布拉格微腔结构所反射。
 
 ![on_resonance](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/waveguide_bragg_microcavity_on_resonance.png)
+
 ![off_resonance](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/waveguide_bragg_microcavity_off_resonance.png)
 
 # 参考文献

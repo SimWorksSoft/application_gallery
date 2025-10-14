@@ -49,7 +49,9 @@ For Si_AWG, the part of arrayed waveguide contains only waveguide structures tha
 Since we separate the AWG simulation into two parts, the light source for each arrayed waveguide in the output region must be guaranteed to be the same as the mode of each arrayed waveguide coupled by the light source through the input planar waveguide. From the above figure, we observe that the light is injected to the output tapered waveguide with a certain angle after passing through the arrayed waveguide. Therefore, we should align the injection direction of the mode sources with the middle axis angle of the tapered waveguides. Our mode solver will automatically calculate the propagation mode in the current direction.
 
 We also need to set the amplitude of each mode source to match the transmittance of light coupled from the input waveguide into each individual waveguide in the array. And the pulse delays of each mode source should be computed based on the phase delays from length differences in arrayed waveguide. Thus, the pulse delay of the mode source can be calculated as follows:
+
 $$\Delta(t)=\frac{dL n_g^a}{c}$$
+
 where $dL$ is the length difference between neighboring array waveguides, $n_g^a$ is the group refractive index of the array waveguide, and $c$ is the speed of light in vacuum.
 
 # Simulation results

@@ -12,6 +12,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/ring_fd
 Integrated photonics has become a key enabling technology in areas such as optical communications, sensing, and signal processing. Among various photonic devices, microring resonators are widely used in applications such as filtering, modulation, and nonlinear optics due to their compact footprint, high quality factor, and excellent wavelength-selective properties. To achieve the desired spectral response within the target wavelength range, precise parameter optimization and performance prediction are essential during the design stage.
 
 In this case, we design and simulate a microring resonator with a center wavelength of $1.55 \mu m$ and a free spectral range (FSR) of $3200 GHz$.
+
 ![RingResonator_structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/RingResonator_structure.png)
 
 We first use the `FDE` solver to calculate $n_{eff}$ and $n_g$ and determine an appropriate microring radius. Then, with the radius fixed, a 2.5D `FDTD` simulation is performed to obtain the transmission spectrum and Q factor from the *input* port to the *drop* port. The results are compared with those from a 3D `FDTD` simulation to verify both the design accuracy and the reliability of the simulation method.
@@ -43,6 +44,7 @@ The ring resonator is a high Q device, and in order to get more accurate simulat
 Open the attached *RingResonator_FDE.mpps* project and run the *neff_ng.msf* script to sets up the `FDE` solver to perform mode solving and frequency sweeping to get the effective index and group index at $1.55 \mu m$.
 
 ![neff](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/RingResonator_neff.png)
+
 ![ng](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/RingResonator_ng.png)
 
 The results show that $n_{eff}=2.1155$ and $n_g = 4.865$. When $m=27$, the radii calculated from the two formulas are closest, corresponding to $R \approx 3.15 \mu m$.

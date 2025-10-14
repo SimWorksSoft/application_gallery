@@ -12,18 +12,18 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/reso
 
 # 仿真设置
 ## 模型简介
-本案例中关于非线性仿真的特殊仿真设置（如 `override bandwidth for mesh generation`、 光源强度、光源脉冲，归一化等），与案例[使用非线性材料产生谐波](/localhost/case-detail/harmonic-generation-with-nonlinear-materials)相似，在此不再展开介绍。详细模型可以通过附件中的 *four_wave.mpps* 工程文件查看。本案例中设置了三个平面波光源，频率分别为 $100\ THz, 120\ THz$和$140\ THz$，并同时入射到非线性平板。您可以通过禁用部分光源来观察单个光源或多光源作用下的仿真结果。
+本案例中关于非线性仿真的特殊仿真设置（如 `override bandwidth for mesh generation`、 光源强度、光源脉冲，归一化等），与案例[使用非线性材料产生谐波](/localhost/case-detail/harmonic-generation-with-nonlinear-materials)相似，在此不再展开介绍。详细模型可以通过附件中的 *four_wave.mpps* 工程文件查看。本案例中设置了三个平面波光源，频率分别为 $100\ THz, 120\ THz$和 $140\ THz$，并同时入射到非线性平板。您可以通过禁用部分光源来观察单个光源或多光源作用下的仿真结果。
 
 ![fourwave_simulation](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/fourwave_simulation.png)
 
 ## 材料设置
-本案例使用的材料为三阶非线性材料，其基底材料设置为二氧化硅。对于二氧化硅光纤，典型参数如下图所示：其中 $chi1 \ chi2\ chi3$ 分别为一阶、二阶、三阶非线性极化系数；$alpha$ 表示克尔效应在总非线性效应（克尔+拉曼散射）中的占比， $omega \space raman$ 为非线性拉曼角频率， $delta \space raman$ 为共振线宽。
+本案例使用的材料为三阶非线性材料，其基底材料设置为二氧化硅。对于二氧化硅光纤，典型参数如下图所示：其中 $chi1 \ chi2\ chi3$ 分别为一阶、二阶、三阶非线性极化系数； $alpha$ 表示克尔效应在总非线性效应（克尔+拉曼散射）中的占比， $omega \space raman$ 为非线性拉曼角频率， $delta \space raman$ 为共振线宽。
 
 ![fourwave_material](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/fourwave_material.png)
 
 # 仿真结果
 ## 单光源激发
-当仅启用一个光源时，光场通过非线性平板会激发三次谐波成分。如下图所示，分别为$100\ THz$、$120\ THz$和$140\ THz$入射时的输出频谱：
+当仅启用一个光源时，光场通过非线性平板会激发三次谐波成分。如下图所示，分别为 $100\ THz$、 $120\ THz$ 和 $140\ THz$入射时的输出频谱：
 
 ![fourwave_100THz](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/fourwave_f_100THz.png)
 

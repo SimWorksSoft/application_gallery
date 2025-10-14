@@ -17,7 +17,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/triangu
 
 ## 模型简介
 
-本案例使用 FDTD 分析由均匀介质中周期性排列的空气圆柱组成的三角晶格光子晶体的能带结构。与 2D 方晶格光子晶体类似，均匀介质中的空气圆柱周期性排布同样实现了空间中周期性变化的折射率分布，形成了光子带隙，阻碍部分特定频段的光进入结构内部。本光子晶体模型中，介质材料的折射率为 2，周期性排布的空气圆柱的半径$r$为 200 nm，构成的三角晶格的晶格间距$a$为 500 nm。对于这种非矩形晶格结构的光子晶体，在 FDTD 仿真区域中至少包含两个晶格单元。
+本案例使用 FDTD 分析由均匀介质中周期性排列的空气圆柱组成的三角晶格光子晶体的能带结构。与 2D 方晶格光子晶体类似，均匀介质中的空气圆柱周期性排布同样实现了空间中周期性变化的折射率分布，形成了光子带隙，阻碍部分特定频段的光进入结构内部。本光子晶体模型中，介质材料的折射率为 2，周期性排布的空气圆柱的半径 $r$ 为 200 nm，构成的三角晶格的晶格间距 $a$ 为 500 nm。对于这种非矩形晶格结构的光子晶体，在 FDTD 仿真区域中至少包含两个晶格单元。
 
 ## 模型构建
 
@@ -29,7 +29,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/triangu
 
 ![mesh_2d_tri.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/mesh_2d_tri.png)
 
-对于仿真区域中包含多个晶胞的模型，为了避免人工区域折叠的问题，我们必须在每个晶胞中均设有相匹配的偶极子源，并且每一组匹配的偶极子源在晶胞内的位置要完全相同。偶极子源之间的相位差$\Delta\phi$必须满足公式 ：$\Delta\phi = \vec{k} \cdot \Delta \vec{r}$ ，其中 $\vec{k}$ 为仿真的波矢，$\Delta \vec{r}$ 为两偶极子源的位置变化矢量。分析组 Dipole Clouds 的内置脚本会完成这种偶极子源阵列的构建，仅需根据光子晶体模型设置好分析组内的变量参数值。如图所示，三组相匹配的偶极子源被构建完成。
+对于仿真区域中包含多个晶胞的模型，为了避免人工区域折叠的问题，我们必须在每个晶胞中均设有相匹配的偶极子源，并且每一组匹配的偶极子源在晶胞内的位置要完全相同。偶极子源之间的相位差 $\Delta\phi$ 必须满足公式 ： $\Delta\phi = \vec{k} \cdot \Delta \vec{r}$ ，其中 $\vec{k}$ 为仿真的波矢， $\Delta \vec{r}$ 为两偶极子源的位置变化矢量。分析组 Dipole Clouds 的内置脚本会完成这种偶极子源阵列的构建，仅需根据光子晶体模型设置好分析组内的变量参数值。如图所示，三组相匹配的偶极子源被构建完成。
 
 ![dipole_2d_triangular.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/dipole_2d_triangular.png)
 

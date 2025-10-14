@@ -25,9 +25,13 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/solar_o
 
 为了在仿真中建立 P3HT:PCBM、ITO、PEDOT:PSS 和铝的材料模型，我们需要在软件中添加新的 3D 采样数据模型并导入附件中对应材料的采样数据.txt 文件。下图中显示了在 400nm 到 700nm 的太阳光谱范围内，四种材料的拟合曲线。这些材料数据摘自文献[^5][^6][^7]。
 
-![solar_organic_PSS_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_PSS_fitting.png)![solar_organic_PCBM_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_material_PCBM.png)
+![solar_organic_PSS_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_PSS_fitting.png)
 
-![solar_organic_ITO_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_ITO_fitting.png)![solar_organic_Al_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_Al_fitting.png)
+![solar_organic_PCBM_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_material_PCBM.png)
+
+![solar_organic_ITO_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_ITO_fitting.png)
+
+![solar_organic_Al_fitting](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/solar_organic_Al_fitting.png)
 
 # 仿真结果
 

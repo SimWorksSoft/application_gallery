@@ -40,6 +40,7 @@ As shown in the following transmission spectrum, the resonant frequency is 196.8
 The results of the FDFP monitors placed at the horizontal and vertical cross-sections of the microcavity structure reveal the field intensity distribution at different frequencies. The field intensity distributions at resonant and non-resonant frequencies are compared as shown in the following two figures. The first figure shows an approximately 6-fold enhancement in the resonant electric field at the Bragg microcavity. However, the second figure demonstrates that, under non-resonance conditions, a significant portion of the radiation is reflected by the Bragg microcavity structure.
 
 ![on_resonance](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/waveguide_bragg_microcavity_on_resonance.png)
+
 ![off_resonance](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/waveguide_bragg_microcavity_off_resonance.png)
 
 # References

@@ -9,7 +9,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/SMF_28_
 
 # Preface
 
-Single-mode fibers feature a smaller core diameter than multimode fibers, enabling the single-mode transmission within the operating wavelength range. This design improves the transmission performance and reliability of single-mode fibers. Single-mode fibers are widely used in communication fields, including long-distance fiber optic communication, data center interconnection, wireless base station backhaul, CATV, fiber optic sensing, etc. This case aims to demonstrate a simple mode calculation by taking Corning® SMF-28 single-mode fiber as an example.
+Single-mode fibers feature a smaller core diameter than multimode fibers, enabling the single-mode transmission within the operating wavelength range. This design improves the transmission performance and reliability of single-mode fibers. Single-mode fibers are widely used in communication fields, including long-distance fiber optic communication, data center interconnection, wireless base station backhaul, CATV, fiber optic sensing, etc. This case aims to demonstrate a simple mode calculation by taking Corning SMF-28 single-mode fiber as an example.
 
 # Simulation Settings
 
@@ -19,8 +19,8 @@ In this case, the FDE 2D simulation method is used for mode solving purposes. Th
 
 |   Denotation   | Dimension  | Refractive Index |
 | :------------: | :--------: | :--------------: |
-|   $r_{core}$   | 4.1$\mu m$ |       1.44       |
-| $R_{cladding}$ | 50$\mu m$  |     1.434816     |
+|   $r_{core}$   | $4.1 \mu m$ |       1.44       |
+| $R_{cladding}$ | $50 \mu m$  |     1.434816     |
 
 # Simulation Results
 
@@ -28,7 +28,7 @@ After opening the attachment project, setting the central wavelength to $1.55\mu
 
 ![TM0](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SMF_28_FDE_mode_solver_TM0.png)
 
-The following describes the study on the transmission properties of SMF-28 optical fiber. For this purpose, disable symmetric/anti-symmetric boundary conditions, and set all boundaries as PEC. Then switch to `Frequency sweep analysis`, and set the wavelength range to $1.26\mu m$ ~ $1.66\mu m$ specifically for optical communication. After the simulation is completed, the trend of the effective refractive index of the fundamental mode as a function of wavelength is obtained, as shown in the figure below. For the fundamental mode, the effective refractive index is greater than the cladding refractive index over the entire wavelength range. As a result, the fundamental mode is effectively confined within the fiber core.
+The following describes the study on the transmission properties of SMF-28 optical fiber. For this purpose, disable symmetric/anti-symmetric boundary conditions, and set all boundaries as PEC. Then switch to `Frequency sweep analysis`, and set the wavelength range to $1.26\mu m - 1.66\mu m$ specifically for optical communication. After the simulation is completed, the trend of the effective refractive index of the fundamental mode as a function of wavelength is obtained, as shown in the figure below. For the fundamental mode, the effective refractive index is greater than the cladding refractive index over the entire wavelength range. As a result, the fundamental mode is effectively confined within the fiber core.
 
 ![neff](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SMF_28_FDE_analysis_neff.png)
 

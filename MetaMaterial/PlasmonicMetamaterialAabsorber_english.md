@@ -1,6 +1,6 @@
 ---
 title: Plasma Metamaterial Infrared Absorber
-description: "Metamaterial" is a special type of man-made material with extraordinary physical properties that natural materials do not have, such as regulating the frequency, amplitude, phase, etc. of electromagnetic waves. This case models and simulates a Metal-Insulator-Metal (MIM) plasma metamaterial infrared absorber to study its reflection/transmission/absorption characteristics in the visible to near-infrared band.
+description: Metamaterial is a special type of man-made material with extraordinary physical properties that natural materials do not have, such as regulating the frequency, amplitude, phase, etc. of electromagnetic waves. This case models and simulates a Metal-Insulator-Metal (MIM) plasma metamaterial infrared absorber to study its reflection/transmission/absorption characteristics in the visible to near-infrared band.
 language: en-US
 businessId: plasma-metamaterial-infrared-absorber
 keywords: Finite Difference Time Domain(FDTD),Metamaterial,Plasma metamaterial infrared absorber
@@ -24,6 +24,7 @@ This case uses a MIM structure composed of silver-alumina-silver. The lower laye
 ## Material
 
 The metal used in this case is the Ag material created using the Drude model. For specific details about the Drude model, see [Debye, Drude, and Lorentz materials](/localhost/knowledge-base/User-Manual_debye-drude-lorentz-material):
+
 $$\varepsilon_{total}(f) =\varepsilon+\frac{\omega_{p}^{2}}{-(2\pi f)^2+j2\pi f\gamma_{p}}$$
 
 Among them, $\varepsilon=1$, plasma frequency $\omega_p=1.37 \times 10^{16}rad/s$, and collision frequency $\gamma_p=8.5 \times 10^{13}rad/s$. The real and imaginary parts of the permittivity of Ag calculated by the Drude model are shown below.

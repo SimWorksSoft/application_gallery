@@ -15,19 +15,19 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Wire_gr
 
 # 仿真设置
 
-本案例采用 2D FDTD 仿真，由于线栅偏振器是周期性的，在仿真当中构建一个单元结构，使用周期性边界条件`Periodic`，可以节省计算时间。WGP 由线宽$W=100nm$（光栅单元间距$pitch=200nm$）、厚度$H=140nm$的铝制均匀线栅组成，衬底材料为玻璃。其结构如下图所示。对光栅区域，使用$1nm \times 1nm$的自定义网格，提高仿真结果的精度。
+本案例采用 2D FDTD 仿真，由于线栅偏振器是周期性的，在仿真当中构建一个单元结构，使用周期性边界条件`Periodic`，可以节省计算时间。WGP 由线宽 $W=100nm$ （光栅单元间距 $pitch=200nm$ ）、厚度 $H=140nm$ 的铝制均匀线栅组成，衬底材料为玻璃。其结构如下图所示。对光栅区域，使用 $1nm \times 1nm$ 的自定义网格，提高仿真结果的精度。
 
 ![structure_simulation](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Wire_grid_polarizer_structure_simulation.png)
 
 - **光栅**
 
-光栅材料来自内置材料库`Al (Aluminium) - Palik`，需要拟合，拟合波段为$0.45um-0.65um$，拟合结果如下图所示。
+光栅材料来自内置材料库`Al (Aluminium) - Palik`，需要拟合，拟合波段为 $0.45um-0.65um$，拟合结果如下图所示。
 
 ![Al_fit](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Wire_grid_polarizer_material_Al_fit.png)
 
 # 仿真结果
 
-结果表明，WGP 对于 TM 波（S-polarization, S-Pol）的反射率$R$极高（$90\%$），而 TE 波（P-polarization, P-Pol）则主要被透射（超过$75 \%$）。通过扫描不同光栅间距（pitch）下的透射/反射率，结果表明：在$450nm$的波长下，使用$100nm$间距的 WGP 可以实现极高的偏振消光比（超过$40000$），与参考文献一致。
+结果表明，WGP 对于 TM 波（S-polarization, S-Pol）的反射率 $R$ 极高（ $90\%$ ），而 TE 波（P-polarization, P-Pol）则主要被透射（超过 $75 \%$ ）。通过扫描不同光栅间距（pitch）下的透射/反射率，结果表明：在 $450nm$ 的波长下，使用 $100nm$ 间距的 WGP 可以实现极高的偏振消光比（超过 $40000$ ），与参考文献一致。
 
 ## TE 和 TM 偏振的反射、透射率
 
@@ -35,7 +35,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Wire_gr
 
 ![TEM_RT](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Wire_grid_polarizer_TEM_RT_new.png)
 
-当光源以 TE 波入射时，超过$75 \%$的入射光被透射；相反地，光以 TM 波入射时，几乎不存在透射，$90\%$的左右光被反射。以上表明了，WGP 对入射光具有偏振选择性。
+当光源以 TE 波入射时，超过 $75 \%$ 的入射光被透射；相反地，光以 TM 波入射时，几乎不存在透射， $90\%$ 的左右光被反射。以上表明了，WGP 对入射光具有偏振选择性。
 
 ## PER 与光栅间距的关系
 
@@ -43,7 +43,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Wire_gr
 
 ![sweep_PER](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Wire_grid_polarizer_sweep_PER_new.png)
 
-提取了 WGP 分别在波长$450nm$，$550nm$和$650nm$下，PER 与光栅间距的关系图，其结果与**参考文献 Figure 2**[^1]一致。在$450nm$波长下，使用$100nm$间距的 WGP 可以实现高达$40000$的 PER。
+提取了 WGP 分别在波长 $450nm$，$550nm$ 和 $650nm$ 下，PER 与光栅间距的关系图，其结果与**参考文献 Figure 2**[^1]一致。在 $450nm$ 波长下，使用 $100nm$ 间距的 WGP 可以实现高达 $40000$ 的 PER。
 
 # 附录
 
@@ -70,7 +70,7 @@ TE、TM 分别表示横电(Transverse Electric)场、横磁(Transverse Magnetic)
 
 $$r_e=\frac{P_{1}}{P_{0}}$$
 
-其中，$P_{1}$、$P_{0}$分别为光源打开时的光功率和光源关闭时的光功率。
+其中，$P_{1}$ 、$P_{0}$ 分别为光源打开时的光功率和光源关闭时的光功率。
 ER 是一个无量纲的物理量，通常会取 dB 表示，即：
 
 $$r_e=-10log(\frac{P_{1}}{P_{0}})$$
@@ -81,14 +81,14 @@ $$r_e=-10log(\frac{P_{1}}{P_{0}})$$
 
 $$r_{pe}=-10log(\frac{P_{s}}{P_{p}})$$
 
-$P_{s}$和$P_{p}$分别为 S 偏振的光功率和 P 偏振的光功率，PER 的单位为 dB。
-由于光源的总功率$P_0$一定，因此，
+$P_{s}$ 和 $P_{p}$ 分别为 S 偏振的光功率和 P 偏振的光功率，PER 的单位为 dB。
+由于光源的总功率 $P_0$ 一定，因此，
 
 $$r_{pe}=-10log(\frac{P_{s}/P_0}{P_{p}/P_0})=-10log(\frac{T_{s}}{T_{p}})$$
 
-$T_{s}$和$T_{p}$分别为 S 偏振的透射率和 P 偏振的透射率，PER 的单位为 dB。
+$T_{s}$ 和 $T_{p}$ 分别为 S 偏振的透射率和 P 偏振的透射率，PER 的单位为 dB。
 
-由于$T_p$不能超过$100\%$，增加 PER 最有效的方法是降低$T_S$。
+由于 $T_p$ 不能超过 $100\%$，增加 PER 最有效的方法是降低 $T_S$。
 
 # 参考文献
 

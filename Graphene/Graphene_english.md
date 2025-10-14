@@ -11,6 +11,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/graphen
 
 Graphene is a single-layer carbon material that is only one atom thick. It can be used in nanoscale plasma systems due to its unique physical properties. Light can be manipulated and controlled by adjusting the electrostatic doping or Fermi level to excite plasmon waves in single-layer graphene.
 Chu [^1] et al. studied a type of tunable terahertz metamaterial based on single-layer and multilayer doped graphene. They found that even slight variations in the number of graphene layers and Fermi level may lead to significant changes in the resonant wavelength and modulation intensity. This case aims to simulate this tuning process in 3D FDTD.
+
 ![graphene_structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/graphene_structure.png)
 
 # Simulation Settings
@@ -48,11 +49,14 @@ Open the attached project and run the `Graphene_metamaterial.msf` script to obta
 # Appendixes
 
 The graphene conductivity [^1] based on the approximate Drude model:
+
 $$\sigma \approx \frac{-ie^2E_F}{\pi \hbar^2(\omega + i\tau^{-1})}$$
+
 $\omega$ is the angular frequency, $\tau$ is the electron relaxation time, and $E_F$ is the Fermi level.
 For the material used in this model, the contribution of interband electronic transitions to the conductivity is omitted. By running the script `Graphene_conductive.msf` upon the completion of the nested parameter sweeps mentioned above, the real and imaginary parts of the graphene surface conductivity are obtained based on the Drude model and the full surface conductivity model, respectively. The graphene materials used in these two models exhibit certain differences in the surface conductivity.
 
 ![sigma_real](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/graphene_sigma_difference_real_1.png)
+
 ![sigma_imag](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/graphene_sigma_difference_imag_1.png)
 
 # References

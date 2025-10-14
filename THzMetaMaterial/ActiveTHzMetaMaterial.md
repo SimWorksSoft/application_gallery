@@ -15,16 +15,16 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Active_
 
 ## 结构简介
 
-本案例中使用的太赫兹超材料由砷化镓（GaAs）基底以及其表面的金（Au）层组成，其结构如下图所示。参考文献中使用的金的厚度为$0.2 \mu m$，远小于仿真中使用的波长（130$\mu m$ - 1200$\mu m$），因此在本案例中可以使用`2D Structure`来构建金层。由于仿真结构及光源在 X 方向上是对称的，我们在$X_{min}$和$X_{max}$方向上使用`Symmetric`对称边界条件。
+本案例中使用的太赫兹超材料由砷化镓（GaAs）基底以及其表面的金（Au）层组成，其结构如下图所示。参考文献中使用的金的厚度为 $0.2 \mu m$，远小于仿真中使用的波长（ $130 \mu m - 1200\mu m$ ），因此在本案例中可以使用`2D Structure`来构建金层。由于仿真结构及光源在 X 方向上是对称的，我们在 $X_{min}$ 和 $X_{max}$ 方向上使用`Symmetric`对称边界条件。
 
 ![Active_THz_Metamaterial_structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_structure.png)
 |参数|A|D|G|W|
 |:-----:|:-----:|:-----:|:-----:|:-----:|
-|值（$\mu m$）|36|10|2|4|
+|值（ $\mu m$ ）|36|10|2|4|
 
 ## 材料设置
 
-使用 Drude 模型（其中包含等离子体频率$\omega_p$和碰撞频率$\gamma_p$）来表示金材料。在低频极限（$\omega_p << \gamma_p$）时，Drude 模型可以表示为一个简单的导电模型，因此本案例使用`Perfect electric conductor(PEC)`完美电导体材料来代替金材料。
+使用 Drude 模型（其中包含等离子体频率 $\omega_p$ 和碰撞频率 $\gamma_p$ ）来表示金材料。在低频极限（ $\omega_p << \gamma_p$ ）时，Drude 模型可以表示为一个简单的导电模型，因此本案例使用`Perfect electric conductor(PEC)`完美电导体材料来代替金材料。
 
 # 仿真结果
 
@@ -42,7 +42,9 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Active_
 
 绘制出的结果如下图，可以看出在谐振频率 0.66THz 下，电场高度集中于分裂间隙处，超表面单元之间连接的金属线上没有明显的表面电流。
 
-![Active_THz_Metamaterial_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_E.png)![Active_THz_Metamaterial_K](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_K_new.png)
+![Active_THz_Metamaterial_E](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_E.png)
+
+![Active_THz_Metamaterial_K](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Active_THz_Metamaterial_K_new.png)
 
 # 参考文献
 

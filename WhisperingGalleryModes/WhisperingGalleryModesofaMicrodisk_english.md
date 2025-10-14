@@ -25,7 +25,9 @@ The figure below shows the spectrum obtained from the `FDFP` monitor. As can be 
 
 The figures below show the magnetic field distribution of the microdisk when the resonance wavelength is $418nm$ and $428nm$ respectively. As can be seen from the figure, when the resonance wavelength is $418nm$, the resonant mode is the first-order mode of the microdisk, and when the resonance wavelength is $428nm$, it is the second-order mode of the microdisk. The simulation results are consistent with those given in **Figure4** in the reference.
 
-![WhisperGalleryMicrodisk_H418](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/WhisperGalleryMicrodisk_H418.png)![WhisperGalleryMicrodisk_H428](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/WhisperGalleryMicrodisk_H428.png)
+![WhisperGalleryMicrodisk_H418](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/WhisperGalleryMicrodisk_H418.png)
+
+![WhisperGalleryMicrodisk_H428](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/WhisperGalleryMicrodisk_H428.png)
 
 # References
 

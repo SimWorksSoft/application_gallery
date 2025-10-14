@@ -16,7 +16,7 @@ Chu[^1]等人研究了一种基于单层和多层掺杂的石墨烯可调谐的�
 
 # 仿真设置
 
-本案例使用 3D FDTD 进行仿真。石墨烯沉积在硅衬底上，沿 x 轴边长$W=0.15 um$， 沿 y 轴的边长为$L=0.01um$, 二氧化硅衬底的厚度为 $t = 10 um$。结构在 X 和 Y 方向上均匀无限延伸，故使用周期性边界条件来节约仿真时间。在 z 方向上使用 PML 边界条件，将 PML 层数设置为 12 来提高对光的吸收效果。其仿真示意图如下所示。同时，由于石墨烯结构非常微小，因此对石墨烯层使用自定义网格以提高仿真精确度。
+本案例使用 3D FDTD 进行仿真。石墨烯沉积在硅衬底上，沿 x 轴边长 $W=0.15 um$， 沿 y 轴的边长为 $L=0.01um$, 二氧化硅衬底的厚度为 $t = 10 um$。结构在 X 和 Y 方向上均匀无限延伸，故使用周期性边界条件来节约仿真时间。在 z 方向上使用 PML 边界条件，将 PML 层数设置为 12 来提高对光的吸收效果。其仿真示意图如下所示。同时，由于石墨烯结构非常微小，因此对石墨烯层使用自定义网格以提高仿真精确度。
 
 ![graphene_simulation_structure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/graphene_simulation_structure.png)
 
@@ -33,7 +33,7 @@ Chu[^1]等人研究了一种基于单层和多层掺杂的石墨烯可调谐的�
 |   3    |          0.00099          |             0.217              |       300        |            1            |
 |   4    |          0.00099          |             0.217              |       300        |            4            |
 
-当以上参数取$Scattering Rate = 0.00099$； $Chemical Potential(eV)  = 0.217$； $Temperature(K) = 300$； $Conductivity Scaling= 1$，可以得到石墨烯表面电导率的拟合结果，其实部和虚部如下图：
+当以上参数取 $Scattering Rate = 0.00099$； $Chemical Potential(eV)  = 0.217$； $Temperature(K) = 300$； $Conductivity Scaling= 1$，可以得到石墨烯表面电导率的拟合结果，其实部和虚部如下图：
 
 ![graphene_material_fit](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/graphene_material_fit_1.png)
 
@@ -47,11 +47,14 @@ Chu[^1]等人研究了一种基于单层和多层掺杂的石墨烯可调谐的�
 # 附录
 
 近似 Drude 模型石墨烯电导率[^1]：
+
 $$\sigma \approx \frac{-ie^2E_F}{\pi \hbar^2(\omega + i\tau^{-1})}$$
-$\omega$为角频率，$\tau$为电子弛豫时间，$E_F$为费米能级。
+
+$\omega$为角频率， $\tau$ 为电子弛豫时间， $E_F$ 为费米能级。
 该模型材料省略了带间电子跃迁对电导率的贡献。在上述嵌套扫描结束后，运行脚本`Graphene_conductive.msf`可以获得 Drude 模型石墨烯和全表面电导模型石墨烯表面电导率的实部和虚部，两者的表面电导率有一定的差别。
 
 ![sigma_real](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/graphene_sigma_difference_real_1.png)
+
 ![sigma_imag](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/graphene_sigma_difference_imag_1.png)
 
 # 参考文献

@@ -34,9 +34,10 @@ As shown in the figure below, the transmission spectrum is normalized by dividin
 
 ![cw_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_T_normalized_release141.png)
 
-The distribution plots of $|E|^2$ at the transmitted and reflected surfaces of the gold film are shown below. Although the intensity in the incident field is only 1$V/m$, a comparison of this intensity with the intensity of the transmission/reflection profiles shows that there is a significant enhancement in the local near-field.
+The distribution plots of $|E|^2$ at the transmitted and reflected surfaces of the gold film are shown below. Although the intensity in the incident field is only 1 $V/m$, a comparison of this intensity with the intensity of the transmission/reflection profiles shows that there is a significant enhancement in the local near-field.
 
 ![abs(E)2_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_transmitted_surface_E_new.png)
+
 ![abs(E)2_R](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_reflected_surface_E_release141.png)
 
 Below is the field distribution of the z-y plane section at x=0. By adjusting the range of the data colorbar, the regions where the near-field intensity has been increased by more than 10 times are clearly displayed.

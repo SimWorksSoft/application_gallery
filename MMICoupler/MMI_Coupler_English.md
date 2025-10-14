@@ -1,6 +1,6 @@
 ---
 title: Multi-Mode Interference (MMI) Coupler
-description: The Multi-mode Interference (MMI) coupler is composed of three parts: input waveguide, output waveguide, and multimode interference region. When the optical field is injected into the multimode interference region through the input waveguide, the interference between multiple modes produces a self-imaging effect. This effect causes periodic generations of one or more images of the input field along the propagation direction of the guided wave. As a result, the MMI can achieve optical wavelength division multiplexing/demultiplexing, power division, polarizing splitter and other functions by this effect.
+description: The Multi-mode Interference (MMI) coupler is composed of three parts (input waveguide, output waveguide, and multimode interference region). When the optical field is injected into the multimode interference region through the input waveguide, the interference between multiple modes produces a self-imaging effect. This effect causes periodic generations of one or more images of the input field along the propagation direction of the guided wave. As a result, the MMI can achieve optical wavelength division multiplexing/demultiplexing, power division, polarizing splitter and other functions by this effect.
 language: en-US
 businessId: mmi-coupler
 keywords: Finite Difference Time Domain(FDTD),Multi-Mode Interference Coupler,Optical waveguide
@@ -16,9 +16,9 @@ The Multi-mode Interference (MMI) coupler is composed of three parts: input wave
 - self-imaging effect
   The self-imaging effect is the theoretical basis of MMI. According to this theory, the length of the interference region of a 1 $\times$ N symmetric MMI coupler is generally located at the position of the first N-fold image, which is calculated as follows:
 
-$$L_{MMI}=\frac{3L_\pi}{4N}$$
+  $$L_{MMI}=\frac{3L_\pi}{4N}$$
 
-where $L_\pi=\pi/(\beta_0-\beta_1)\approx 4n_rW^2/(3\lambda)$, $\beta_0$, $\beta_1$ are the propagation constants of the fundamental and first-order eigenmodes, respectively; $n_r$ is the refractive index of the waveguide, and $W$ is the width of the MMI waveguide. For details, please refer to Ref. 1[^1].
+  where $L_\pi=\pi/(\beta_0-\beta_1)\approx 4n_rW^2/(3\lambda)$, $\beta_0$, $\beta_1$ are the propagation constants of the fundamental and first-order eigenmodes, respectively; $n_r$ is the refractive index of the waveguide, and $W$ is the width of the MMI waveguide. For details, please refer to Ref. 1[^1].
 
 In this example, the taper waveguide is smoothly connected between the input/output waveguide and the MMI region. It significantly minimizes the impact of longitudinal multimode on imaging non-uniformity, and also reduces the loss due to reflection at the junction between the single-mode waveguide and the MMI region.
 
@@ -49,6 +49,7 @@ In this example, this MMI coupler is not sensitive to the polarization, e.g., TE
 Open the appendix project file and run it directly. The results of the `Frequency-Domain Field and Power` monitor clearly indicate that the energy of the incident beam is equally divided between the two output ports after the self-image effect in the MMI. In this case, the transmittivity of both output ports is equal.
 
 ![fdfp](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_FDFP_monitor_E.png)
+
 ![T_port2_and3](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/MMI_port2_and3_T_real.png)
 
 # Parameter analyses

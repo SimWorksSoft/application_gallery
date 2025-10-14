@@ -34,9 +34,10 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/nanohol
 
 ![cw_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_T_normalized_release141.png)
 
-下图为金薄膜透射与反射两边表面的$|E|^2$分布图。虽然入射场强度仅为 1$V/m$，但是对比透射/反射分布图的强度，可以明显看出局域近场的增强非常显著。
+下图为金薄膜透射与反射两边表面的 $|E|^2$ 分布图。虽然入射场强度仅为 1 $V/m$，但是对比透射/反射分布图的强度，可以明显看出局域近场的增强非常显著。
 
 ![abs(E)2_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_transmitted_surface_E_new.png)
+
 ![abs(E)2_R](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/nanohole_array_reflected_surface_E_release141.png)
 
 如下为 x=0 时 z-y 平面截面的场分布图。通过调整数据 colorbar 范围，可以清楚观察到哪些区域的近场强度被增强到 10 倍以上。

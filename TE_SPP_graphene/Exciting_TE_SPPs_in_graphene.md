@@ -10,6 +10,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/surface
 # 前言
 
 石墨烯材料从发现至今，因其优异的电学、热学、力学性能，引起了科学研究者的广泛关注。石墨烯的化学势可以通过施加电压或者化学掺杂等方式进行调节，这使其得在物质与光相互作用领域有着极大的应用范围，尤其是表面等离子体（surface plasmon polaritons, SPPs）。表面等离子体是一种电磁表面波，其场的能量大部分集中在金属表面，而在垂直界面方向上呈指数衰减。石墨烯材料通过激发表面等离子体的方式，将大大增强其与光相互作用的能力。
+
 本案例将根据文献[^1]当中的工作，来研究石墨烯在满足表面等离子体共振条件时，石墨烯与光相互作用增强的现象。
 
 # 仿真设置
@@ -20,7 +21,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/surface
 
 ## 材料
 
-在 1.31$\mu m$的波段下，该结构中基底材料$SiO_2$的相对折射率为 1.4468，PC 结构由相对折射率为 2.7204 的$TiO_2$和相对折射率为 1.4468 的$SiO_2$交替组成，最上层的材料是相对折射率为 1.481 的 PMMA，背景材料为空气。石墨烯材料的散射率设置为 0.11meV、化学势设置为 0.5eV，其拟合曲线如下所示，其余参数及细节请参考[石墨烯材料](/localhost/knowledge-base/User-Manual_graphene-material)。
+在 $1.31 \mu m$ 的波段下，该结构中基底材料 $SiO_2$ 的相对折射率为 1.4468，PC 结构由相对折射率为 2.7204 的 $TiO_2$ 和相对折射率为 1.4468 的 $SiO_2$ 交替组成，最上层的材料是相对折射率为 1.481 的 PMMA，背景材料为空气。石墨烯材料的散射率设置为 0.11meV、化学势设置为 0.5eV，其拟合曲线如下所示，其余参数及细节请参考[石墨烯材料](/localhost/knowledge-base/User-Manual_graphene-material)。
 
 ![graphene_fit](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/surface_plasmon_in_graphene_material_fit.png)
 

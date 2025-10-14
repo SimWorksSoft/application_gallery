@@ -43,7 +43,7 @@ In this case, a plane light source is added below the structure, incident along 
 
 ## Unit Cell
 
-The attached _Unit_cell.mpps_ is a simulation project for a single period of the metalens. The project contains two parameter sweeps: _Phase_sweep_ and _PCR_sweep_. Where _Phase_sweep_ scans the rotation angle of the etched holes from 0~360$\degree$ to study the phase changes of the transmitted light field. _PCR_sweep_ scans the wavelength of the incident light from 0.5-1 $\mu m$ to study the polarization conversion rate(PCR) at different wavelengths of incidence.
+The attached _Unit_cell.mpps_ is a simulation project for a single period of the metalens. The project contains two parameter sweeps: _Phase_sweep_ and _PCR_sweep_. Where _Phase_sweep_ scans the rotation angle of the etched holes from $0~360 \degree$ to study the phase changes of the transmitted light field. _PCR_sweep_ scans the wavelength of the incident light from $0.5-1\ \mu m$ to study the polarization conversion rate(PCR) at different wavelengths of incidence.
 
 After running the parameter sweep, the phase distribution of the right circularly polarized light can be obtained when the left-handed polarized light is incident, as shown in the figure below.
 
@@ -64,6 +64,7 @@ The _FullLens.mpps_ in the attachment is a full lens simulation project. It is d
 It can be seen that the light here is right circularly polarized, different from the incident left circularly polarized light, indicating that the metalens conforms to the PB phase theory. The propagation electric field intensity distribution after the light source passes through the lens is shown in the figure below. We can see that the light source successfully converges after passing through the metalens, with the focal point located at z=3.8 $\mu m$, differing by 5% from the designed focal length.
 
 ![E2_ZXPlane](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Metalens_PBPhase_E2_ZXPlane.png)
+
 ![E2_X0](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Metalens_PBPhase_E2_X0.png)
 
 To verify whether the focused energy spot is consistent with the designed focal point, the full width at half maximum (FWHM) of the focal spot is used to characterize the quality of the spot focus. The theoretical calculation formula for FWHM is as follows:
@@ -75,6 +76,7 @@ In the formula, $\lambda$ is the design wavelength, numerical aperture $NA=nsin{
 The distribution of the electric field intensity at the focal point is shown in the following figure. The FWHM can be calculated as 596 $nm$, which is consistent with the theoretical value.
 
 ![Focus_XYPlane](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Metalens_PBPhase_E2_Focus_XYPlane.png)
+
 ![Focus_y0](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Metalens_PBPhase_E2_Focus_y0.png)
 
 The script also calculates the focusing efficiency of the lens: within the focal plane, the ratio of the transmitted power inside a circle with the focal spot center as the origin and three times the FWHM as the diameter to the total power passing through the aperture is 39.6%. The simulation results verify the correctness of the theory and design.

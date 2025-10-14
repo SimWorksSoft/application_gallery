@@ -20,6 +20,7 @@ In many fields of data communication, high-speed optical interconnection technol
 The focusing grating coupler used in this example is based on a shallow-etched $SOI$ silicon substrate with a $Si$ waveguide layer, $SiO_{2}$ cladding on both the top and bottom, and the lowest substrate material is still $Si$, as shown in the figure above. The $Z$ direction is the optical transmission direction, and the thickness direction of the optical waveguide is the $Y$ direction. Since the structure is symmetric in the $X$ direction and the light source is anti-symmetric in the $X$ direction, we use the `Anti-Symmetric` boundary condition in the $X_{min}$ direction.
 
 A confocal grating is used for the coupling grating part, and its process parameters (waveguide thickness, buried oxygen layer thickness, substrate thickness, cladding thickness, and shallow etch depth) are specified based on IME, and the grating period, duty cycle, and taper are designed referring to paper[^1], as shown in the figure below. The grating itself focuses light into a silicon wire waveguide of width $dwg=0.5\mu m$, where the taper has a tensor angle of $\alpha=31.5^{\circ}$ and a $r$ of $19.5\mu m$. In the design, the grating pattern is a concentric circular line, with the center of the circle at the apex of a wedge intersecting the waveguide.
+
 ![focusingGratingCoupler_gratingstructure](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/focusingGratingCoupler_gratingstructure.png)
 
 | Variables | Period/$\mu m$ | Duty |
@@ -35,14 +36,17 @@ The incident light received by the focusing grating is typically emitted from a 
 # Simulation results
 
 The electric field distribution at a wavelength of $1.46\mu m$ obtained in the `FDFP` monitor placed inside the focusing grating coupler is shown in the figure below. Clearly, the free-space light from the Gaussian source is coupled by the grating into the silicon wire waveguide on the right.
+
 ![focusingGratingCoupler_E146](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/focusingGratingCoupler_Efield.png)
 
 The figure displays the transmittance distribution with wavelength obtained from the 'FDFP' monitor in the silicon wire waveguide when the Gaussian light source is $23 \mu m$ away from the silicon wire waveguide. It is evident that the focusing grating coupler achieves a maximum transmittance of $52\%$ at a wavelength of $1.56 \mu m$.
+
 ![focusingGratingCoupler_T](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/focusingGratingCoupler_T.png)
 
 # Parameter analyses
 
-The project includes a parameterized sweep that scans the Gaussian source from $23\mu m$ to $25\mu m$ away from the silicon wire waveguide in the optical propagation direction. After the sweep, you can obtain the distribution of transmittance T varying with the position of the light source. The figure shows that the maximum transmittance of the focusing grating coupler is achieved at a wavelength of $1.556\mu m$ when the light source is $24.33\mu m$ away from the silicon wire waveguide, with a T value of $51.97\%$.
+The project includes a parameterized sweep that scans the Gaussian source from $23\mu m$ to $25\mu m$ away from the silicon wire waveguide in the optical propagation direction. After the sweep, you can obtain the distribution of transmittance T varying with the position of the light source. The figure shows that the maximum transmittance of the focusing grating coupler is achieved at a wavelength of $1.556\mu m$ when the light source is $24.33\mu m$ away from the silicon wire waveguide, with a T value of $51.97\%$ .
+
 ![focusingGratingCoupler_sweep](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/focusingGratingCoupler_sweep.png)
 
 # References

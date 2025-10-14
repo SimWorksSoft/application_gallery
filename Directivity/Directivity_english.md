@@ -98,13 +98,16 @@ For a fixed plane,
 
 Prad's calculations assume that all power is captured by the monitor box, and that the captured power comes from the radiating antenna itself, rather than from an external source outside the box. In practice, however, the antenna needs to be excited using an external source (called an antenna feed), which must pass through the box. The power carried by the antenna feed will significantly affect the calculated Prad. To correct for this, the user is allowed to specify a window around the antenna feed to counteract the power carried by that feed. The size of this window must be carefully chosen to capture only the input power and not the radiated power of the antenna. In most cases, the source window should match the location and size of the source (see the rectangular probe antenna example for more details). If the antenna feed itself contributes to the total radiation, the effect of window size on directivity and radiated power should be tested.
 For $U_0$,
+
 $$U_0 = \frac{P_{rad}}{4\pi}$$
+
 $$U(\theta,\phi) = \frac{1}{2\eta}[|E_\theta|^2 + |E_\phi|^2]$$
 
 ### Radiated power
 
 $P_{rad}$ represents the **total radiated power (watt)**.
 For $P_{rad}$, the calculation formula is:
+
 $$P_{rad} = \iint_\Omega U(\theta,\phi) d\Omega$$
 
 ### Average radiation intensity
@@ -114,6 +117,7 @@ $$P_{rad} = \iint_\Omega U(\theta,\phi) d\Omega$$
 ### Directivity
 
 **Directivity** (formerly known as directive gain) is defined as the ratio of the radiated power in a specified direction to the average radiated power in all directions.
+
 $$D \equiv \frac{U}{\bar U} \tag{*}$$
 
 Where,
