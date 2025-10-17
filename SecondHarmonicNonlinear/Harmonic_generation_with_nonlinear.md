@@ -11,7 +11,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/nonline
 
 在非线性光学中，光与介质相互作用产生了非线性极化，光的电场分量 E 与非线性极化强度 P 的关系为：
 
-$$\pmb{P}=\varepsilon_0\chi^{(1)}\cdot\pmb{E}+\varepsilon_0\chi^{(2)}\cdot\pmb{E}^2+\varepsilon_0\chi^{(3)}\cdot\pmb{E}^3+\cdot\cdot\cdot$$
+$$\boldsymbol{P}=\varepsilon_0\chi^{(1)}\cdot\boldsymbol{E}+\varepsilon_0\chi^{(2)}\cdot\boldsymbol{E}^2+\varepsilon_0\chi^{(3)}\cdot\boldsymbol{E}^3+\cdot\cdot\cdot$$
 
 其中 $\chi^{(1)}$、 $\chi^{(2)}$、 $\chi^{(3)}$ 分别为介质的线性极化率、二阶非线性极化率、三阶非线性极化率。忽略三阶以及更高阶项，该式即为二阶非线性材料极化强度的表达式。二阶非线性效应在光学倍频、混频、调制等领域应用广泛，在激光器、频率转换等器件当中扮演着重要作用。本案例将利用二阶非线性材料仿真二次谐波的产生。
 

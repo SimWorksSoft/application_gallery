@@ -11,7 +11,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/nonline
 
 In nonlinear optics, the interaction between light and media produces nonlinear polarization, and the relationship between the nonlinear polarization intensity P and the electric field component E of light is:
 
-$$\pmb{P}=\varepsilon_0\chi^{(1)}\cdot\pmb{E}+\varepsilon_0\chi^{(2)}\cdot\pmb{E}^2+\varepsilon_0\chi^{(3)}\cdot\pmb{E}^3+\cdot\cdot\cdot$$
+$$\boldsymbol{P}=\varepsilon_0\chi^{(1)}\cdot\boldsymbol{E}+\varepsilon_0\chi^{(2)}\cdot\boldsymbol{E}^2+\varepsilon_0\chi^{(3)}\cdot\boldsymbol{E}^3+\cdot\cdot\cdot$$
 
 where $\chi^{(1)}$, $\chi^{(2)}$, $\chi^{(3)}$ are the linear susceptibility, second-order nonlinear susceptibility, and third-order nonlinear susceptibility of the medium, respectively. Ignoring terms of third-order and higher-order, this equation is the expression for the polarization intensity of a second-order nonlinear material. Second-order nonlinear effects are widely used in optical frequency doubling, frequency mixing, and modulation, which play an important role in lasers, frequency conversion and other devices. This example will simulate the generation of second harmonic using second-order nonlinear materials.
 

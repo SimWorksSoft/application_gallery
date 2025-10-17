@@ -18,7 +18,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/MMI_FDT
 
   $$L_{MMI}=\frac{3L_\pi}{4N}$$
 
-  其中 $L_\pi=\pi/(\beta_0-\beta_1)\approx 4n_rW^2/(3\lambda)$，其中 $\beta_0，\beta_1$ 分别为基模和一阶本征模的传播常数， $n_r$ 是波导的折射率，$W$ 是 MMI 波导的宽度。具体细节请参考文献[^1]。
+  其中 $L_\pi=\pi/(\beta_0-\beta_1)\approx 4n_rW^2/(3\lambda)$，其中 $\beta_0，\beta_1$ 分别为基模和一阶本征模的传播常数， $n_r$ 是波导的折射率， $W$ 是 MMI 波导的宽度。具体细节请参考文献[^1]。
 
 在本案例当中，在输入/输出波导连接 MMI 区域的之间平滑地接入一段楔形波导（taper waveguide），可以大大减小纵向多模对成像均匀性的影响，同时降低在单模波导与 MMI 区域连接处产生反射而引起的附加损耗。此时，波导、楔形结构及 MMI 区的尺寸参数均影响着器件的性能，设计过程中往往不能确定每个结构的尺寸，并且很难保证每一部分的最佳尺寸在整合之后仍是最优解。本案例使用优化与扫描功能对模型参数进行扫描分析，从而进一步优化参数和模型。
 

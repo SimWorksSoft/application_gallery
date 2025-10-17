@@ -118,7 +118,7 @@ $$P_{rad} = \iint_\Omega U(\theta,\phi) d\Omega$$
 
 **Directivity** (formerly known as directive gain) is defined as the ratio of the radiated power in a specified direction to the average radiated power in all directions.
 
-$$D \equiv \frac{U}{\bar U} \tag{*}$$
+$$D \equiv \frac{U}{\bar U}$$
 
 Where,
 $U$ represents **radiation intensity (W/unit solid angle)**

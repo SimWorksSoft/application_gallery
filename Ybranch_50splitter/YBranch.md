@@ -15,7 +15,7 @@ Y 分束器是集成光子器件中一种非常重要的单元器件，它有非
 
 # 仿真设置
 
-由于 Y 分束器放置在玻璃中，两者相互重叠，FDTD 求解器中使用`Mesh Order`来确定仿真时重叠部分使用的材料，数值越大优先级越高。因此，本案例中，Y 分束器材料 Si 的`Mesh Order`被设置为 1，$SiO_{2}$ 的`Mesh Order`被设置为 0。本案例中的 Y 分束器上下对称，使用`force symmetric y mesh`功能可以保证器件上下两部分的网格分布一致。查看任意波长下器件的index分布，即可验证网格分布是否符合仿真需求。下图为该 Y 分束器在波长为 $1.4509\mu m$ 处的 index_x 分布图，可以看出在仿真中构建的 index 分布也是上下对称的，符合仿真需求。
+由于 Y 分束器放置在玻璃中，两者相互重叠，FDTD 求解器中使用`Mesh Order`来确定仿真时重叠部分使用的材料，数值越大优先级越高。因此，本案例中，Y 分束器材料 Si 的`Mesh Order`被设置为 1， $SiO_{2}$ 的`Mesh Order`被设置为 0。本案例中的 Y 分束器上下对称，使用`force symmetric y mesh`功能可以保证器件上下两部分的网格分布一致。查看任意波长下器件的index分布，即可验证网格分布是否符合仿真需求。下图为该 Y 分束器在波长为 $1.4509\mu m$ 处的 index_x 分布图，可以看出在仿真中构建的 index 分布也是上下对称的，符合仿真需求。
 
 ![YBranch_index](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/YBranch_index_x_new.png)
 

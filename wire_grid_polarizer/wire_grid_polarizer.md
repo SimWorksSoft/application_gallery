@@ -27,7 +27,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Wire_gr
 
 # 仿真结果
 
-结果表明，WGP 对于 TM 波（S-polarization, S-Pol）的反射率 $R$ 极高（ $90\%$ ），而 TE 波（P-polarization, P-Pol）则主要被透射（超过 $75 \%$ ）。通过扫描不同光栅间距（pitch）下的透射/反射率，结果表明：在 $450nm$ 的波长下，使用 $100nm$ 间距的 WGP 可以实现极高的偏振消光比（超过 $40000$ ），与参考文献一致。
+结果表明，WGP 对于 TM 波（S-polarization, S-Pol）的反射率 $R$ 极高（ 90 % ），而 TE 波（P-polarization, P-Pol）则主要被透射（超过 75 % ）。通过扫描不同光栅间距（pitch）下的透射/反射率，结果表明：在 450 nm 的波长下，使用 100 nm 间距的 WGP 可以实现极高的偏振消光比（超过 40000 ），与参考文献一致。
 
 ## TE 和 TM 偏振的反射、透射率
 
@@ -35,7 +35,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Wire_gr
 
 ![TEM_RT](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Wire_grid_polarizer_TEM_RT_new.png)
 
-当光源以 TE 波入射时，超过 $75 \%$ 的入射光被透射；相反地，光以 TM 波入射时，几乎不存在透射， $90\%$ 的左右光被反射。以上表明了，WGP 对入射光具有偏振选择性。
+当光源以 TE 波入射时，超过 75 % 的入射光被透射；相反地，光以 TM 波入射时，几乎不存在透射， 90 % 的左右光被反射。以上表明了，WGP 对入射光具有偏振选择性。
 
 ## PER 与光栅间距的关系
 
@@ -43,7 +43,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Wire_gr
 
 ![sweep_PER](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Wire_grid_polarizer_sweep_PER_new.png)
 
-提取了 WGP 分别在波长 $450nm$，$550nm$ 和 $650nm$ 下，PER 与光栅间距的关系图，其结果与**参考文献 Figure 2**[^1]一致。在 $450nm$ 波长下，使用 $100nm$ 间距的 WGP 可以实现高达 $40000$ 的 PER。
+提取了 WGP 分别在波长 $450nm$， $550nm$ 和 $650nm$ 下，PER 与光栅间距的关系图，其结果与**参考文献 Figure 2**[^1]一致。在 $450nm$ 波长下，使用 $100nm$ 间距的 WGP 可以实现高达 $40000$ 的 PER。
 
 # 附录
 
@@ -88,7 +88,7 @@ $$r_{pe}=-10log(\frac{P_{s}/P_0}{P_{p}/P_0})=-10log(\frac{T_{s}}{T_{p}})$$
 
 $T_{s}$ 和 $T_{p}$ 分别为 S 偏振的透射率和 P 偏振的透射率，PER 的单位为 dB。
 
-由于 $T_p$ 不能超过 $100\%$，增加 PER 最有效的方法是降低 $T_S$。
+由于 $T_p$ 不能超过 100 %，增加 PER 最有效的方法是降低 $T_S$。
 
 # 参考文献
 

@@ -121,7 +121,7 @@ $$P_{rad} = \iint_\Omega U(\theta,\phi) d\Omega$$
 
 **方向性**（旧称 directive gain）的定义是指定方向辐射功率与所有方向辐射功率平均值的比值。
 
-$$D \equiv \frac{U}{\bar U} \tag{*}$$
+$$D \equiv \frac{U}{\bar U}$$
 
 其中，
 $U$表示**辐射强度(W/unit solid angle)**
@@ -133,7 +133,7 @@ $\bar U$表示**各向同性源的辐射强度(W/unit solid angle)**
 
 $$D_{max} = \frac{U_{max}}{U}$$
 
-此外，定义**部分方向性**（给定偏振的部分辐射强度除以所有方向上总辐射强度的平均值），易知在球坐标系中，由于远场辐射场仅包含 $E_\theta$、$E_\phi$( $E_r \approx 0$ )，定义总的方向性为
+此外，定义**部分方向性**（给定偏振的部分辐射强度除以所有方向上总辐射强度的平均值），易知在球坐标系中，由于远场辐射场仅包含 $E_\theta$、 $E_\phi$ ( $E_r \approx 0$ )，定义总的方向性为
 
 $$D = D_\theta + D_\phi$$
 

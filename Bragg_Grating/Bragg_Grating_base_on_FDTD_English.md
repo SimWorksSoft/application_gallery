@@ -30,18 +30,20 @@ In this example, the light source is set to be a mode light source. The fundamen
 ## Material
 
 - substrate
+  
   The substrate material used in this example is `SiO2 (Glass) - Palik` from the software's built-in material library. The wavelength range of the light source is $1.52\mu m$ to $1.56\mu m$. As shown in the below figure, the refractive indices of SiO2 after the fitting are 1.44415 in the real part and 0 in the imaginary part in the wavelength range.
 
-![sio2_glass_palik_1.52-1.56um.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SiO2_glass_palik_1.52_1.56um.png)
+  ![sio2_glass_palik_1.52-1.56um.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SiO2_glass_palik_1.52_1.56um.png)
 
 - grating
+  
   The grating material used in this example is a silicon material based on the Lorentz model. For specific details on the setup of the Lorentz model, please refer to [Drude_Debye_Lorentz](/localhost/knowledge-base/User-Manual_debye-drude-lorentz-material).
 
-$$\varepsilon_{total}(f) =\varepsilon + \frac{\varepsilon_p.\omega_p^2}{\omega_p^2+4\pi j\gamma_p.f-(2\pi f)^2}$$
+  $$\varepsilon_{total}(f) =\varepsilon + \frac{\varepsilon_p.\omega_p^2}{\omega_p^2+4\pi j\gamma_p.f-(2\pi f)^2}$$
 
-In this example, $\varepsilon = 7.98737$, $\varepsilon_p = 3.68799$, $\omega_p = 3.93282e+15$, $\gamma_p = 1e+8$, the figure below displays the real and imaginary parts of the refractive index of the Si material after this setting.
+  In this example, $\varepsilon = 7.98737$, $\varepsilon_p = 3.68799$, $\omega_p = 3.93282e+15$, $\gamma_p = 1e+8$, the figure below displays the real and imaginary parts of the refractive index of the Si material after this setting.
 
-![si_lorentz_1.52_1.56um.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Si_lorentz_1.52_1.56um.png)
+  ![si_lorentz_1.52_1.56um.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Si_lorentz_1.52_1.56um.png)
 
 # Simulation results
 

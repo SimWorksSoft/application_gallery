@@ -52,7 +52,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/jpg/Si_AWG_
 
 $$\Delta(t)=\frac{dL n_g^a}{c}$$
 
-其中，$dL$ 为相邻阵列波导的长度差，$n_g^a$ 为阵列波导的群折射率，$c$ 为真空中的光速。
+其中， $dL$ 为相邻阵列波导的长度差， $n_g^a$ 为阵列波导的群折射率， $c$ 为真空中的光速。
 
 # 仿真结果
 

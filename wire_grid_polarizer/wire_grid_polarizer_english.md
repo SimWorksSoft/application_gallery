@@ -23,11 +23,11 @@ As the WGP features a periodic structure, the 2D FDTD simulation is simplified b
 
   The material of the grating is taken from the built-in material library `Al (Aluminium) - Palik` and is therefore subject to fitting within the wavelength range of $0.45um-0.65um$. The fitting results are shown in the figure below.
 
-![Al_fit](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Wire_grid_polarizer_material_Al_fit.png)
+  ![Al_fit](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Wire_grid_polarizer_material_Al_fit.png)
 
 # Simulation Results
 
-The results indicate that the WGP exhibits an extremely high ($90\%$) reflectivity $R$ for TM waves (S-polarization or S-Pol), while it primarily allows transmission (>$75 \%$) for TE waves (P-polarization or P-Pol). By sweeping the transmissivity/reflectivity of the WGP for different grating pitches, the results obtained show that at a wavelength of $450nm$, using a pitch of $100nm$ for the WGP leads to an extremely high PER (>$40000$). This finding is consistent with the results reported in the reference.
+The results indicate that the WGP exhibits an extremely high ( 90 % ) reflectivity $R$ for TM waves (S-polarization or S-Pol), while it primarily allows transmission (> 75 %) for TE waves (P-polarization or P-Pol). By sweeping the transmissivity/reflectivity of the WGP for different grating pitches, the results obtained show that at a wavelength of 450 nm, using a pitch of 100 nm for the WGP leads to an extremely high PER (> 40000). This finding is consistent with the results reported in the reference.
 
 ## Reflectivity and Transmissivity of TE and TM Polarizations
 
@@ -35,7 +35,7 @@ After opening the attached project and executing `T_TEM` sweep in the Sweep tab,
 
 ![TEM_RT](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Wire_grid_polarizer_TEM_RT_new.png)
 
-When the source is incident with TE polarization, more than $75 \%$ of the incident light is transmitted through the system. Conversely, when the light is incident with TM polarization, there is minimal transmission, with approximately $90\%$ of the light being reflected. This demonstrates the polarization selectivity of that WGP for incident light.
+When the source is incident with TE polarization, more than 75 % of the incident light is transmitted through the system. Conversely, when the light is incident with TM polarization, there is minimal transmission, with approximately 90 % of the light being reflected. This demonstrates the polarization selectivity of that WGP for incident light.
 
 ## Dependence of PER on Grating Pitch
 
@@ -88,7 +88,7 @@ $$r_{pe}=-10log(\frac{P_{s}/P_0}{P_{p}/P_0})=-10log(\frac{T_{s}}{T_{p}})$$
 
 $T_{s}$ and $T_{p}$ respectively represent the transmissivity of S-polarized light and the transmissivity of P-polarized light. The PER is expressed in dB.
 
-Since $T_p$ cannot exceed $100\%$, the most effective way to increase the PER is to reduce $T_S$.
+Since $T_p$ cannot exceed 100 %, the most effective way to increase the PER is to reduce $T_S$.
 
 # References
 

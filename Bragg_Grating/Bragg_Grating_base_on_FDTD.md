@@ -13,7 +13,7 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/png/bragg_g
 
 # 仿真设置
 
-在本案例中，使用 3D FDTD 进行仿真，布拉格光栅是由硅材料组成的光栅器件放置在绝缘硅基平面上组成，其结构详见下图。在 x 方向上设置`Bloch`边界条件，仿真单个光栅周期，用来模拟无限周期的光栅。图中的结构参数，设置如下，其中 $\Lambda$ 为布拉格光栅单个周期的单元长度，$w$ 为条纹平均宽度，$\Delta w$ 为光栅刻痕的深度。
+在本案例中，使用 3D FDTD 进行仿真，布拉格光栅是由硅材料组成的光栅器件放置在绝缘硅基平面上组成，其结构详见下图。在 x 方向上设置`Bloch`边界条件，仿真单个光栅周期，用来模拟无限周期的光栅。图中的结构参数，设置如下，其中 $\Lambda$ 为布拉格光栅单个周期的单元长度， $w$ 为条纹平均宽度， $\Delta w$ 为光栅刻痕的深度。
 
 ![bragg_grating_cross_sectional_view](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/bragg_grating_cross_view.png)
 
@@ -30,18 +30,20 @@ coverImg: https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/png/bragg_g
 ## 材料设置
 
 - 衬底
+  
   本案例中，衬底材料来自软件的内置材料库`SiO2(Glass) - Palik`, 波长范围在 $1.52\mu m$ ~ $1.56\mu m$，材料的拟合结果如下图所示，在该波段下 $SiO_2$ 的折射率实部和虚部分别为 $1.44415$ 和 $0$。
 
-![sio2_glass_palik_1.52_1.56um.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SiO2_glass_palik_1.52_1.56um.png)
+  ![sio2_glass_palik_1.52_1.56um.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/SiO2_glass_palik_1.52_1.56um.png)
 
 - 光栅
+  
   光栅材料为 Lorentz 模型建立的 Si 材料，关于 Lorentz 模型的具体细节请参考[Drude_Debye_Lorentz](/localhost/knowledge-base/User-Manual_debye-drude-lorentz-material)。
 
   $$\varepsilon_{total}(f) =\varepsilon + \frac{\varepsilon_p.\omega_p^2}{\omega_p^2+4\pi j\gamma_p.f-(2\pi f)^2}$$
 
   本案例中， $\varepsilon = 7.98737$, $\varepsilon_p = 3.68799$, $\omega_p = 3.93282e+15$, $\gamma_p = 1e+8$，此时 $Si$ 材料的折射率实部和虚部如下图所示：
 
-![si_lorentz_1.52_1.56um.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Si_lorentz_1.52_1.56um.png)
+  ![si_lorentz_1.52_1.56um.png](https://simworksofficial-files.oss-cn-beijing.aliyuncs.com/mdfile/resources/img/Si_lorentz_1.52_1.56um.png)
 
 # 仿真结果
 
